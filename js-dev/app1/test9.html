@@ -1,0 +1,27 @@
+<form action ="success.html">
+Username : <input type="text" name="username" /><br/>
+Password : <input type="password" name="password" /><br/>
+<input type="submit" value="Login" onclick="return loginVerify()"/>
+</form>
+
+<script>
+
+function loginVerify()
+{
+	var thisForm = document.forms[0];
+	var username = thisForm.username;
+	if(username.value.length == 0)
+	{
+		alert("username is required");
+		username.focus();
+		return false;
+	}
+	var password = thisForm.password;
+	if(password.value.length == 0)
+	{
+		alert("password is required one");
+		password.focus();
+		return false;
+	}
+}
+</script>

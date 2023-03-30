@@ -1,0 +1,3 @@
+1--Print the prime number from 1000 to 1 in the reverse order
+2--print the fibonesis series from 500 to 100 in the reverse order
+3--print the Amstrong number which is in between two given numbers.If there is no  amstrong number then check ?

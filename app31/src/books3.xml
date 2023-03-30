@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="101">
+        <title>Xml made easy</title>
+        <author>prince</author>
+        <price reduction="10%">500</price>
+    </book>
+    <book id="102">
+        <title>spring made easy</title>
+        <author>HERO</author>
+        <price reduction="25%">2000</price>
+    </book>
+   
+</books>

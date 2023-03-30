@@ -1,0 +1,15 @@
+Anonymous inner classes
+-----------------------
+-Anonymous inner class should end with semicolon.it is mandatory.
+-it is only for one object creation purpose.u can not create a second object 
+as there is no class name.
+-We can not developed any constructor in the inner class,as there is no name.
+compiler providing default constructor.
+-if u want to initialize any non static memebers that can be done only through IIBs 
+not through constructor.
+-new members of anonymous can not be used from outside innner class.
+
+-Anonymous inner class always should be concreate.
+inside anonymos inner class no abstract methods are allowed.
+If there is a abstract class,then cte.
+

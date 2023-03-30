@@ -1,0 +1,15 @@
+<form>
+	First Name :
+	<input type="text" name="firstName" onclick="copyToAnother()" /><br/>
+	First Name Again :
+	<input type = "text" name ="firstNameAgain" /><br/>
+</form>
+<script>
+	function copyToAnother()
+	{
+		var f1 = document.forms[0];
+		var firstName = f1.firstName;
+		var firstNameAgain = f1.firstNameAgain;
+		firstNameAgain.value = firstName.value;
+	}
+</script>

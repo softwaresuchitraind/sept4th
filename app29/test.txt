@@ -1,0 +1,22 @@
+Object
+|
+A
+|
+B------String
+|
+C
+|
+D
+|
+E
+*derived casting is only for the class which are under one inheristance/hiheracy.
+*derived casting is converting one class type to another class type of same inheristance.
+
+there are two types under derived casting
+1--auto upcasting
+subclass is autometically convert from  subclass to superclass
+D class can be autometically upcast to C,B,A.
+2-- explicit downcasting
+while converting superclass type to subclass type, it is not autometicaly by the 
+compiler, it has to done explicitely.
+

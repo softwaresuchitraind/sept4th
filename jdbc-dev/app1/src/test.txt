@@ -1,0 +1,27 @@
+--SqlDeveloper is a client to database.
+--Through JDBC API---Application Programming Interface----to connect to the database
+--In JDBC API there are two packages
+
+1----java.sql;
+2----javax.sql;
+
+--driver has to register---Driver registration
+--Extablish a connection from a java program to database.
+--We can send SQL command to database.
+
+* there is no driver in jdk.Database providers supply the driver.
+-While installing oracle .
+F:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib
+
+We have to update classpath
+. represents current directory
+F:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc5.jar;.
+
+>javap orale.jdbc.driver.OracleDriver
+
+JDBC 4.0
+------------
+1. ROWID Data type
+2. Auto-loading of JDBC driver class
+3. SQL exception handling enhancements
+

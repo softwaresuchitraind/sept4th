@@ -1,0 +1,7 @@
+test.4
+........
+The default return value is true.
+if something is going wrong we have to explicitely.
+if bottom is receiving false from the validate it is not submitting.
+--
+test111.ht.

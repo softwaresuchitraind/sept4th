@@ -1,0 +1,52 @@
+In order to maintain state of the user We require an explicit programming.
+In order to achieve session management explicitely,there r 4 different ways
+1.
+
+
+RequestDispatcher
+-----------------------
+1.interface
+2.forword and i   nclude
+3.javax.servlet
+4.generic to every protocol
+5.there are two ways of getting an object type of the RequestDispatcher
+	1. by using request object(relative approach)
+	2. by using context object(absolute approach)
+
+6.it is used for giving a call to any another resource of same applictaion from a servlet
+
+
+
+24/05
+---------
+3 different containters
+
+1--Request object
+2--HttpSession
+3--Context object
+
+-Request object is a container to share the data between the objects which are involved while processing one request.
+
+2-Session object is acting as a container for different requests of one user.
+we can use session object to share the data
+
+3-Context object----for entire application there is one context object---if u want to share the data among different user requests
+then we will be using servlet context object as a container.
+
+for this 3 containers Servlet-API provided listeners
+
+There are two types of listeners available
+
+1- Life cycle Listeners
+2- Attribute Management Listeners
+
+
+What is a Life cycle Listeners
+---------------------------------
+Container creation 
+Container Destroy
+
+What could be the attribute change Listeners
+Attribute Adding Replacing Removing
+
+

@@ -1,0 +1,43 @@
+assertion
+...........
+assert is a keyword from jdk 1.4
+assertions are introduced in jdk 1.4
+assertions are used for rising assertion error when something went wrong.
+It is almost similar to throw keyword functionality.
+--throw statement is always a last statement in the current block
+-In java 4 keywords last statement
+return
+break
+continue
+throw
+
+--Assertions are only for rising assertion error if something going wrong.
+--There are two types of assert statement
+1--VSA--Very Simple Assert statement
+
+assert boolean_exp;
+
+2--SA---Simple Assert
+
+assert boolean_exp:some_thing;
+
+*boolean_exp----true/false---can supply boolean variable--
+-call a method which returns boolean type
+*some_thing-----can be any literal/any variable value also/any expression 
+result/method calling statement but return type should not void.
+if u dont supply something cte.
+
+*By default no assert statement is executing.
+*In order to execute any assert statement we have to supply one VM argument that VM argument is
+
+-ea (or)   -enableassertions
+
+*to disable assert statement explicitely another assert statement is required.
+
+
+-da  (or) -disableassertions
+
+-We can enable/disable in three different ways
+1---Execution wise
+2---a particulr package wise
+3---a particular class wise

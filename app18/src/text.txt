@@ -1,0 +1,28 @@
+entity
+--------
+any thing in the real word.
+person,mobile,laptop,Tv
+
+entity information wrapping is called a class.
+class is the general term which is used for wrapping one entity information.
+While wrapping entity information int software.
+datamembers
+beheviour.
+------------
+attributes---property----if common--static
+beheviour----method-------if common--static
+------------------------
+person--class
+kiran----object
+institute--class
+lara----object
+company---class
+tcs----object
+country---class
+India---object
+Mobile--class
+samsung mobile---object
+-------------------------
+for one entity design only one class
+
+

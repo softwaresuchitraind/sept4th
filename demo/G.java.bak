@@ -1,0 +1,10 @@
+class G 
+{
+	public static void main(String[] args) 
+	{
+		System.out.print("Hello World!");
+		System.out.print("Hello World!");
+		System.out.print(2000);
+		System.out.print(65.5);
+	}
+}

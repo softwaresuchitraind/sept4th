@@ -1,0 +1,9 @@
+class H 
+{
+	public static void main(String[] args) 
+	{
+		int i=100;
+		byte b1=i;
+		System.out.println("Hello World!");
+	}
+}

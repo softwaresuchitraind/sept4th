@@ -1,0 +1,13 @@
+Maven setup
+-----------
+https://maven.apache.org/install.html
+MAVEN_HOME=F:\softwares\apache-maven-3.5.2-bin\apache-maven-3.5.2
+PATH=D:\JDK8.0\bin;F:\softwares\apache-maven-3.5.2-bin\apache-maven-3.5.2\bin
+mvn install:install-file -Dfile=D:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\jdbc\\lib\\ojdbc5.jar -DgroupId=
+com.oracle -DartifactId=ojdbc5 -Dversion=11.1.0 -Dpackaging=jar
+
+<dependency>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc5</artifactId>
+    <version>11.1.0</version>
+</dependency>

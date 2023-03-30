@@ -1,0 +1,48 @@
+/*MISSED ELEMENT OF THE GIVEN ARRAY*/
+import java.util.Arrays;
+class Z
+{
+	public static void main(String[] args) 
+	{
+		
+		int[]x={20,4,15,5,18,8,10};
+		 System.out.println(Arrays.toString(x));
+		 System.out.println(".....................");
+		for(int i=0;i<x.length;i++)
+		{
+			for(int j=0;j<x.length-1-i;j++)
+
+			{
+				if(x[j]>x[j+1])
+				{
+					int temp=x[j];
+					x[j]=x[j+1];
+					x[j+1]=temp;
+				
+				}
+			}
+		
+		}
+		System.out.println(Arrays.toString(x));
+		int min=x[0];
+		for(int i=1;i<x.length;i++)
+	   {
+			if ((x[i])>(min+1))
+			{
+				for(int j=min+1;j<x[i];j++)
+				{
+					System.out.print(j+ ",");
+				}
+				
+			}
+	      min=x[i];
+	
+	   }
+		
+   
+	
+
+	}
+}
+
+/*Finding frequency of given array*/

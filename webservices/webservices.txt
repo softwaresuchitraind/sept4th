@@ -1,0 +1,19 @@
+create dynnamic webservices
+search--restful jersey
+
+https://jersey.github.io/
+in order to develop restful webservices we have to download api
+--copy the jar file paste in lib folder
+--we need to register one pre defined servlet inside web.xml.
+com.sun.jersey.api.container.servlet.ServletContainer
+
+http://localhost:7070/app1/rest/hello
+
+Application_JSON
+
+------
+JSON--- standard javascript objects
+
+-webservices sending response back to client through several media type
+-How we can send a input to the webservice.
+

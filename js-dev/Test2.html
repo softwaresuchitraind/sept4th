@@ -1,0 +1,13 @@
+<form action="">
+	param1:<input type="text" name="param1"/></br>
+	param2:<input type="text" name="param2"/></br>
+	<input type="submit" value="submit" onclick="return validate()"/>
+</form>
+
+<script>
+	function validate()
+	{
+		alert("Param1 value:"+document.forms[0].param1.value);
+		alert("Param2 value:"+document.forms[0].param2.value);
+	}
+</script>

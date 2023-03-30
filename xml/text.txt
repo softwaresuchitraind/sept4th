@@ -1,0 +1,61 @@
+XML
+----
+* XML is for data storage,describing the data, trasfering the data.
+* Xml file can open in any operating system --no need of software.
+*it is independent of hardware,software.
+* it is not a programming language,it is the standard way for storing the data.
+
+...
+*no predefined tags used we have to defined our own tags.
+*XML tags are case sensitive <UPPER> NOT SAME AS </lower>
+*order should be followed.
+
+* If broqser is displaying in the tree structure then it is well formed XML.
+*attributes can be used for meta data.
+
+* any name can be choosen to attribute value.
+* every attribute value should be enclosed under double code,
+
+abc2
+.....
+<!-- 
+*attributes can be used for meta data.
+
+* any name can be choosen to attribute value.
+* every attribute value should be enclosed under double code,
+* for both siblings attribute may be diiferent.
+* if multiple attribute are there u have to use space as separator.
+*every tag should have ending tag.
+* if any tag does not have ending tag then starting tag is ending tag.
+
+-->
+
+-----------------
+*From any programming language to interact with XML file that is a small requirement 
+that is parser.
+*there are lot of parsers available in the industry.
+*in case of java lot more parsers are available,among them very widely used parsers 
+are
+1--DOM-Document object Model
+2--SaX- Simple API for XML.
+
+*By using DOM parser we can perform we can write and read.
+*SaX parser is used only for reading not for writing.
+*In case of DOM parser, internally it is using tree model.
+*sax parser is usually using event model.
+*In case of DOM parser entire XML file is in the memory in the tree structure because
+of this memory overheads.
+*In case of SAX parser based on event the reading required portion of the XML file.
+*DOM parser not very advisable while interacting with bigger XML files.
+*U can read any XML file no matter of size of the file in SAX,there is no chance of 
+memory overhead.
+* in case of DOM parser we can read the XML File in reverse order because of entire file
+is available in the memory.
+*in case of SAX parser we can not read the XML file in reverse direction.
+*Both parsers are available in the JDK installatiom.based on requirement we have to use.
+
+
+
+
+
+

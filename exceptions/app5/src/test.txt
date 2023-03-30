@@ -1,0 +1,1 @@
+throw keyword is used for rising exception object explicitely.

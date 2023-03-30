@@ -1,0 +1,43 @@
+<form action="">
+	param1:<input type="text" name="param1"/></br>
+	param2:<input type="text" name="param2"/></br>
+	<input type="submit" value="submit" onclick="return validate()"/>
+</form>
+
+<script>
+	function validate()
+	{
+		var myForm=document.forms[0];
+		var p1=myForm.param1;
+		if(p1.value.length==0)
+		{
+			alert("Enter param1 value");
+			p1.focus();
+			return false;
+		}
+		var p2=myForm.param2;
+		if(p2.value.length==0)
+		{
+			alert("Enter param2 value");
+			p2.focus();
+			return false;
+		}
+		if(document.forms[0].param1.value.length==0)
+		{
+			alert("enter param1 value");
+			document.forms[0].param1.focus();
+			return false;
+		}
+		if(document.forms[0].param2.value.length==0)
+		{
+			alert("enter param2 value");
+			document.forms[0].param2.focus();
+			return false;
+		}
+		
+	}
+</script>
+<!-- 
+always use var keyword for any type of variable
+if action is blanck it will submitting to current resource.
+-->

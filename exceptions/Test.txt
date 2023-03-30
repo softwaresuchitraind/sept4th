@@ -1,0 +1,42 @@
+	THROWABLE
+	    |
+ --------------------
+ |		  |
+ excetion	Error
+ *Both are due to abnornal condition
+ *Both can be handled.
+*javac statement--syntax error ---nor Errorclass
+
+*exception type of object is rising if java command executes abnormal condition
+*if any external condition occuring due to abnormal condition----Stack memory/heap memory not available.
+
+Exception--------------------------------------
+						|
+...........					RuntimeException
+ClassNotfoundException				-----------------
+CloneNotSupportedException			ArithmeticException			
+IOException					NullPointerException
+	|
+	FileNotFoundException			NumberFormatException	
+InterruptedException				ArrayIndexOutofBounds
+ParseException					ClassCastException
+SQLException
+*All these are for only abnormal condition due to java condition
+
+Error
+......
+StackOverflowError
+OutofMemoryError
+NoclassDefFoundError
+NoSuchMethodFoundError
+AssertionError
+
+1.checked---compiler varifying that exception is proper or not,Programmer has to consider additional syntax.
+compiler varifying whether checked statements are proper or not.Compiler knows--whether try catch is there
+
+2.unchecked----Progammer can ignore,compiler not at all for checking the syntax about unchecked,no syntax rule
+		compiler does not know.--whether try catch is there /required or not.
+		Error and runtimeException-------unchecked
+		Remaining-----Checked
+*checked exceptions are very less dependency to compiler.
+*Throwable and Exception  is treated as semichecked.As some subclasses are checked and some are unchecked.

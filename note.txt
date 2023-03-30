@@ -1,0 +1,5 @@
+to omit back up file in edit plus
+-------------------------------
+tools - preferences-select uncheck backup file while saving-Apply -okk
+
+http://javaconceptoftheday.com/exception-handling-java/

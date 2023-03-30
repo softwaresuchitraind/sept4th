@@ -1,0 +1,77 @@
+7/04
+.m2 folder containing a repositorty that contains several jar files
+pom -project object model
+
+-maven is using one pom file --project object model.
+
+go t0 --spring.io
+
+
+-Attribute name and field name shhould start with lower case.
+
+14/04/18
+15/04/18
+----------
+BEan Life cycle
+
+21/04/18
+------------
+Annotation based string type
+
+22/04/2018
+----------------
+28/04/2018
+----------------
+Event listening
+Spring IOC
+-Interacting with database
+Spring-jdbc
+
+http://maven.apache.org/
+
+download this
+
+MAVEN_HOME=G:\personal\java_mat\apache-maven-3.5.3
+PATH=G:\personal\java_mat\apache-maven-3.5.3\bin
+JAVA_HOME=F:\jdk1.8.0_151
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

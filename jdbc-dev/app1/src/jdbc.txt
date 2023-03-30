@@ -1,0 +1,70 @@
+	public boolean execute(String sql)-------------->DDL,DML
+	public int executeUpdate(String sql) =========>DML------->insert,update and delete
+	public ResultSet executeQuery(String sql)===>DQL
+	public int[] executeBatch()-------------+
+	--------->DML
+
+Even execute() for DML, use executeUpdate for DML as it returns int it shows how many records updated.
+If u use batch  multiple DML commands use executeBatch();
+
+
+JDBC 3.0
+----------
+1.	New DatabaseMetaData methods
+2.	Retrieval of parameter metadata
+3.	Retrival of auto-generated keys
+4.	Savepoints
+
+JDBC 4.0
+--------------
+1. ROWID Data type
+2. Auto- loading of JDBC driver class
+3. SQL exception handling enhancements
+
+
+
+1--ROWID Data type
+
+CREATE TABLE EMP3(SNO NUMBER,
+		NAME VARCHAR2(90),
+		R_ID ROWID);
+)
+
+--Only on JDBC 4.0 there is support a column with datatype
+as ROWID
+-In pagenation read every record with rowid,in last page we have to supply 
+
+-in JDBC 4.0 Rule,whichever driver is current url,if the 
+driver is available in the buiild path or classpath
+that driver loading autometically.
+- if multiple switable drivers are avilable in the same url
+then it will get ambiguity exception.
+-In that scenario we can specify explicitlely
+that can be done in two ways.
+we can go for Class.forName
+or we can go for second approach.
+
+33
+--
+Inside catch block we can read all existing exceptions
+
+for(Thowable t : ex)
+{
+System.out.println(t);
+}
+
+
+Reading in ms application
+..............
+requires poi library
+https://poi.apache.org/download.html
+
+from a java program to ms application we require poi livraries.
+
+DROP TABLE GENDERS CASCADECONSTRAINTS;
+
+
+
+
+
+

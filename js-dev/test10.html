@@ -1,0 +1,31 @@
+<form>
+	First Name:
+	<input type="text"name="firstName" onblur="trim(this)"/></br>
+	Last Name: 
+	<input type="text"name="lastName" onblur="trim(this)"/></br>
+	Email: 
+	<input type="text"name="email" onblur="trim(this)"/></br>
+	<input type="submit" value="submit"/>
+</form>
+<script>
+	function trim(field)
+	{
+		var  value = field.value;
+		var firstChar=value.charAt(0);
+		while(firstChar==' ')
+		{
+			value=value.substring(1,value.length);
+			firstChar=value.charAt(0);
+		}
+
+		var lastChar=value.charAt(value.length-1);
+		while(lastChar==' ')
+		{
+			value=value.substring(0,value.length-1);
+			lastChar=value.charAt(value.length-1);
+		}
+		field.value=value;
+	}
+
+
+</script>

@@ -1,0 +1,67 @@
+assertion
+...........
+assert is a keyword from jdk 1.4
+assertions are introduced in jdk 1.4
+assertions are used for rising assertion error when something went wrong.
+It is almost similar to throw keyword functionality.
+--throw statement is always a last statement in the current block
+-In java 4 keywords last statement
+return
+break
+continue
+throw
+
+--Assertions are only for rising assertion error if something going wrong.
+--There are two types of assert statement
+1--VSA--Very Simple Assert statement
+
+assert boolean_exp;
+
+2--SA---Simple Assert
+
+assert boolean_exp:some_thing;
+
+*boolean_exp----true/false---can supply boolean variabl---call a method which returns boolean type
+*some_thing-----can be any literal/any variable value also/any expression result/method calling statement 
+		but return type should not void.
+		if u dont supply something cte.
+
+*By default no assert statement is executing.
+*In order to execute any assert statement we have to supply one VM argument that VM argument is
+
+-ea (or)   -enableassertions
+
+*to disable assert statement explicitely another assert statement is required.
+
+-da  (or) -disableassertions
+
+-We can enable/disable in three different ways
+1---Execution wise
+2---a particulr package wise
+3---a particular class wise
+
+
+differ--throw/assert
+
+throw execute every time,there is no chance of enabling and disabling
+assert can enable and disable.Any rule does not require to particular person.
+
+*everybody has to evalute the throw
+* we can find two groups of people--one group it is mandatory---other not mandatory---assert
+
+*
+-throw  is last statement in the current block
+like break,continue.
+-assert staement can be declared anywhere.
+
+*
+By using throw statement we can specify any type of error/Exception statement.
+We can not specify any class name in asset explicityely it always throw
+AsserionError.
+
+
+
+
+usage
+-------
+raising AssertionError whenever rule got failed

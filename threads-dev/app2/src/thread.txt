@@ -1,0 +1,23 @@
+Threads
+----------
+multitasking---more than one task simultaniously.
+There are two types of multitasking
+
+1---multiprocessing
+multiple processes executing simultaniously to produce multitasking.
+every process is indepedent in case of multiprocessing.
+How one processor handing multiple processes simultaniously.
+processor goes to one process ------1/2ms only.
+processor executes only one process not multiple.
+processor swich over to one process.
+
+multiprocessing is a heavy weigth process.every process is indepedent it has to 
+switch over form one process to other processes.
+
+5 processes start
+2---multithreading
+
+--In one process executing multiple threads executing simultaniously.
+-In java there are two ways of creating multiple threads in JAVA
+
+

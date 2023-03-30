@@ -1,0 +1,94 @@
+-we can not provide java statements in java script.
+-in html we can not retrived session object id.
+-html is for presenting something inside in HTML,it is not allowing any java code.
+
+servelt---any kind of programming, it is purely java class.
+-presenting is tedious/difficult in servlet.
+
+-to adress limitations of HTML,SERVLET---a new technology i.e JSP.
+-Every HTML file can be renamed as .jsp
+-HTML file content can be developed jsp.
+-every file shold be saved as .jsp extension.
+-inside JSP we can develop java code
+-there are different ways to incoporate java codes in JSP.
+-based on type of the java statement we will be choseing which way we have to use JSP.
+--if more request---servlet---processing
+--if more presentation--jsp---presentation
+*jsp is not replacement to Servlet.
+-jsp is mainly for presenting customer result.
+
+-jsp is 100% replacement to HTML.
+-while modifying we dont need to compile jsp file.
+-jsp is not developed in WEB-INF folder.
+
+expressions
+-----------
+<%=  %>---------is only for printing not for anything else
+
+scriplet
+...........
+<% -------%>
+scriplet is a part of the method
+
+test6
+Delcaration
+...........
+<%!
+	int x;
+	int test(int i)
+	{
+		return i*i;
+	}
+%>
+
+used for declaring global variables and defining a methods.
+x is a global variable ,without initialisation we can use x.
+
+if any thing is written in scriplet that is private
+
+
+directives
+<%@ page import="java.util.*" %>
+there are 3 types of directives available
+
+1---page--------importing
+2---include
+3---taglib
+
+
+*Apart from directves other 3 is called scripting elements.<declaration,scriplet,expressions>
+*directives are only for giving direction to server.
+
+
+http://localhost:7070/app1/test4.jsp
+
+* for every jsp server is developing a java file for jsp that java file is compiled and compiled file is running.
+
+C:\Program Files\Apache Software Foundation\Tomcat 8.0\work\Catalina\localhost\app1\org\apache\jsp
+
+
+*for every jsp server developing is servlet..
+
+Expression should nt have semilcolnon.
+
+
+implicit objects
+---------------
+request		HttpServletRequest
+response	HttpServletResponse
+application	ServletContext
+config		ServletConfig
+out		JspWriter
+session		HttpSession
+page		this(Object)
+pageContext	pageContext
+exception	Throwable
+
+
+9 are available --8 are used for developer--------9 th one is available for error page.
+
+difference between servletContext and servletConfig?
+*for every servlet object there will be one config.
+
+context is application wise------for one servlet one copy.
+config is service wise

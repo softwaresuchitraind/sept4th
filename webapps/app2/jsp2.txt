@@ -1,0 +1,22 @@
+F:\new-ecclise\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost\app7\org\apache\jsp
+
+
+
+jsp:param --used for sending the information in the target place
+that is available
+
+<jsp:include page="test3.jsp">----request dispatchers include
+jsp:forward--it is internally using request dispathcher include and request dispathchers forword
+
+test4.jsp
+--only taget resources are available---same as requestDispatchersForword.
+
+test6.jsp
+........
+We can give call to servlet.
+by forwording only taget resource is coming.
+
+how to use java class inside in jsp
+
+usebean---u can create object to any class. object is creating by clom.lara.Test
+whatever id value u r specifying that id value is reference.

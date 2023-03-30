@@ -1,0 +1,26 @@
+<form action ="success.html" name="f1">
+	Email : <input type="text" name="email" /><br/>
+	Address :<textarea name="address">
+			</textarea><br/>
+	<input type= "submit" value="submit" onclick="return validate()" />
+</form>
+<script>
+	function validate()
+	{
+		var thisForm = document.f1;
+		var email = thisForm.email;
+		if(email.value.length == 0)
+		{
+			alert("email is required one");
+			email.focus();
+			return false;
+		}
+		var address = thisForm.address;
+		if(address.value.length == 0)
+		{
+			alert("Address is required one");
+			address.focus();
+			return false;
+		}
+	}
+</script>

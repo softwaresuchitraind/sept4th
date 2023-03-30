@@ -1,0 +1,22 @@
+<form>
+	First Name : <input type="text" name="firstName" /><br/>
+	<input type ="button" value="check Methods" onclick="experimentMethods()" />
+</form>
+
+<script>
+
+	function experimentMethods()
+	{
+		var value = document.forms[0].firstName.value;
+		var length = value.length;
+		console.log("length:" + length);
+		var firstChar = value.charAt(0);
+		console.log("First Char" + firstChar);
+		var lastChar = value.charAt(length - 1);
+		console.log("Last Char" +lastChar);
+		var indexOfFirstSpace = value.indexOf(' ');
+		console.log("Location of First Space" +indexOfFirstSpace);
+		var indexOfA = value.indexOf('A');
+		console.log   
+	}
+</script>

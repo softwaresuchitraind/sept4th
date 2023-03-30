@@ -1,0 +1,43 @@
+There 4 access specifiers available
+1.private---
+within the class, no inheristance at all,
+you can not call from outside class
+constructors,iibs,sibs, even private members .
+
+2.Default
+not only in current class but throught out the current package,
+-called package scope.
+-defaut scoped members are inheriting to subclasses of 
+same package.
+
+3.protected
+---------
+-usage also current package;
+-protected members are inherited to subclass of any package.
+
+4.public
+-use anywhere 
+-inherit to anywhere
+-inheristance<no restition>
+
+default
+.......
+* default scoped member can be used in throughout current package.can not 
+  be used ouside package.
+
+* default scoped member are inherited to subclass of same package.
+there is a subclass in another package then that subclass is not access.
+
+*Default scoped member usage and inheristance both should be within the current 
+package.
+* default scope and package scope are same.
+
+if A class of one package to be used in another package
+* class should be public.
+*While using a class you have to use along with the package name or import.
+
+
+
+* class can not be private and protected.
+*java file always public or default.
+* protected members can not be used in another package

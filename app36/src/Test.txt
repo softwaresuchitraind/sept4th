@@ -1,0 +1,25 @@
+-while program is running if any abnormal condition is happening an object is rising that rised object should be
+handled to continue the flow.
+-if that object is not handled execution will be terminating.
+--while converting String to number.
+-array of size -5,index--0-4,
+if refer -1,-2 /5----raised exception.
+--reference varibale refering null--from that refering variable
+--class A nad B
+A
+|
+B
+create an object to A downcasting to B----class Cast exception.
+--if the stack memory is not sufficient to execute,Stack overflow error object.
+--whatever heap memory allocated that heap memory not sufficient,it is also OutOfMemory error object.
+-NosuchMethodError--If method which u are calling if not available.
+-NoSuchClassFound---if the class is removed.
+-we are trying to load a class explicitely if the class is not avaliable then you get
+ClassNotfoundException.
+
+-You are trying to interact with database if you use wrong user name,password for that rising SQLException
+-you specify either wrong file name or wrong path then you get IOException.
+-ParseException--if date /time is not correct
+-InteruptedException--if thread is sleeping and trying to interact.
+-u are trying to clone the object which is not eligible to clone--CloneNotSupportedException.
+-there are two types of object while rising some are error and some are exception.

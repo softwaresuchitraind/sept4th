@@ -1,0 +1,3 @@
+Why we need pakage?
+*grouping similar kind of classes into one package.
+*Avoiding naming collision.

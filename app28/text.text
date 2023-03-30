@@ -1,0 +1,21 @@
+type casting
+------------
+converting one datatype to another
+there are two types of casting available
+1-primitive casting
+----
+converting from one numeric primitive to another 
+numeric primitive
+how many numeric primitive datatypes avaiabale?
+6 numeric available
+byte<short<int<long<float<double
+
+two types of cating
+1-auto binary--compiler automatically converts 
+narrowier to wider
+2-Explicit narrowing-while long is assigned to int
+we have to cast explicitly.
+
+2-derived casting
+converting one class type to another class type under
+one inheristace.

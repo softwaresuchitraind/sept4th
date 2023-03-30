@@ -1,0 +1,23 @@
+Angular development
+----------------
+1.node
+2.angular cli
+3.Vs code
+
+1.node
+------
+node.org
+node --version
+npm --version
+
+2. anguar cli
+-----------------
+npm install -g @angular/cli
+ng --version
+
+3. vs code
+-------------
+code.visualstudio.com
+
+code --version
+

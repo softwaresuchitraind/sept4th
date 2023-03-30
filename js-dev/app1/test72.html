@@ -1,0 +1,20 @@
+<p id = "p1">initial content</p>
+<input type="button"
+		value= "populate array content"
+		onclick="readArrayContent()" />
+
+
+<script>
+	var elements = ["abc", 300, "hello", true, "xyz "];
+	var str = "";
+	function readArrayContent()
+	{
+		elements.forEach(iterateElements);
+		document.getElementById("p1").innerHTML = str;
+	}
+	function iterateElements(element, index, array)
+	{
+		alert(element + ":" + index + ":("  +array +")");
+		str += element + ", ";
+	}
+</script>

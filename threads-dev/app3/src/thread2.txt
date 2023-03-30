@@ -1,0 +1,5 @@
+2nd way of creating java
+
+2ways are there
+---------------
+lamda expressions are only for interface for only one method

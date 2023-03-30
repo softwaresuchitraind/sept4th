@@ -1,0 +1,43 @@
+<persons>
+
+	<person id="p101">
+		<name>Ramu</name>
+		<age>25</age>
+		<weight>55.7</weight>
+	</person>
+	<person U_id="p102" some_id="00001">
+		<name>Manu</name>
+		<age>35</age>
+		<weight>65.7</weight>
+	</person>
+	<person></person>
+	<person/>
+	<person id="p464674"/>
+	<person k_id="hello"></person>
+
+	<!-- some commets both single and 
+ 
+multiline -->
+<person>
+<address></address>
+ </person>
+
+
+ <person>
+	<age>may be &gt; 25</age> <!-- greater than is working but less than is not working -->
+	<age>may be &lt; 25</age>
+	<name>Ramu &amp; vijay</name>
+	<country>great &quot;India&quot;</country>
+	<gender>&apos;M&apos;</gender>
+	<!-- every tag is ending with > and < symbol 
+	*we have to use &gt; for >
+					&lt; for <
+					&amp; for &
+					&apos; for '
+					&quot; for ""
+					this is called as entity refernce.
+	-->
+	
+</person>
+</persons>
+

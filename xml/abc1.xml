@@ -1,0 +1,19 @@
+
+
+	<person>
+		<name>Ramu</name>
+		<age>25</age>
+		<weight>55.7</weight>
+	</person>
+	<person>
+		<name>Manu</name>
+		<age>35</age>
+		<weight>65.7</weight>
+	</person>
+
+	<!--
+	no root tags
+	any nuber of siblings can be developed.
+	-->
+
+

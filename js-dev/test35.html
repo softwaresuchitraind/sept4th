@@ -1,0 +1,18 @@
+<p class="c1">initial</p>
+<p class="c1">initial</p>
+<p>initail</p>
+<span class="c1">initail</span><br/>
+<div class="c1">initail</div>
+<div>initail</div>
+<div class="c2">initail</div>
+<input type="button" value="populate" onclick="populateData()" />
+<script>
+	function populateData()
+	{
+		var elements = document.getElementByClassName("c1");
+		for(var i =0; i< elements.length;i++)
+		{
+			element[i].innerHTML = "para no :" +(i+1);
+		}
+	}
+</script>

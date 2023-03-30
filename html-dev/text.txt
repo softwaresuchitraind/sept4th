@@ -1,0 +1,15 @@
+HTML-hypertext mark-up language
+html is a base for something displaying in browser.
+prereqisite to html
+editor
+browser
+all html files we have to save .html/.htm
+lang=english
+<head>-optional
+<br>-breaking the next line go to new line
+</br>if no body-specify starting is ending
+in any order we can close
+
+rowspan ="2"
+colspan="2"
+same column value multiplies rows and columns.

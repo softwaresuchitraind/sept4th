@@ -1,0 +1,15 @@
+		Throwable---SEMI CHECKED
+		     |
+		Exception---SEMI CHECKED
+		     |
+CNFE,CNSE--------IoException-----IE,PE,SQLE-------CHECKED
+		     |
+		FileNotFoundException------CHECKED
+
+
+
+*IOException,FileNotFound--Database
+*Interrupted Exception---threads
+*ParseException---While Parsing DateFormat/number Format.
+*SQlException---while interacting with database throw JDBC
+
