@@ -1,0 +1,10 @@
+Assertions
+..........
+
+VSA
+----
+assert boolean;
+
+SA
+...
+assert boolean :some_message;

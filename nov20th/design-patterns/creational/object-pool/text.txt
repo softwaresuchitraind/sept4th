@@ -1,0 +1,4 @@
+same type of multiple objects --maintaining as a pool.
+-In general pool is a normal.
+-similar kindl of objects keeping one container maintaining --whenever required go to that
+container--once usage got over setting back to container.

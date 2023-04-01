@@ -1,0 +1,7 @@
+file  handling
+--------------
+-Interacting with the file system from java program. It can be writing something
+into the file or reading from the file.
+-for file input and output operations purpose we use java.io package members.
+Seriaslization
+------------------

@@ -1,0 +1,44 @@
+Object class clone() is a protected method
+throws cloneNotSupportedException
+
+-protected members while inhertiong to another packges
+should be used in the subclass,it can not be used outside subclass.
+
+-rerturn type of clone() method is ObjeG:
+Ggct only.
+
+
+Garabage Collection
+------------------------
+-if object having minimum one reference variable that object is called live object.
+-if object does not have even a single reference variable then that object is called abandoned object/dead object.
+
+-to use any object it should require minimum one reference variable.
+-if ur not have an any reference variable.it can not be used.it should be removerd from memory called 
+Garbage objects.
+
+-in java we dont require to removing garbage object from the memory.
+
+Daemon Thread
+----------------n
+-Garbage collector will take care of removing garbage Objects from memory.
+-As soon as object is abadoned immidiately after that it can not be removed.
+
+When object is abandone ?
+-when last reference is removed object is becoming abandoned.
+
+what is difference between request and command ?
+
+-gabage coolector is a low priority thread -
+-whenever abandoned object removing by garbage collector--it is calling finalize() method on the
+same abandoned object.
+
+-finalize() method is a member of Object class.
+
+Resurrection ---if object get life after dead.
+
+-On any object garbage collector calling finalize() method maximum one time.
+-Resurrected Object when abandoned garbage collector removing it directly without calling finalize().
+
+-progameticall we can can finalize() any number of times.
+-when we are calling finalize method object will nor removing.

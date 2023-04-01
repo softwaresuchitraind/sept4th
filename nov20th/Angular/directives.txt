@@ -1,0 +1,708 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd1',
+  template: `
+    <div *ngIf="courses.length > 0">
+        cousess available
+    </div>
+    <div *ngIf="courses.length == 0">
+        no cousess available
+    </div>    
+  `,
+  
+})
+export class D1Component {
+  //courses = ['JAVA', 'J2EE', 'ANGULAR', 'HADOOP'];
+  courses = [];
+}
+under app.component.html
+<d1></d1>
+------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd2',
+  template: `
+    <div *ngIf="cousesAvailable()">
+        cousess available
+    </div>
+    <div *ngIf="!cousesAvailable()">
+        no cousess available
+    </div>    
+  `,
+  
+})
+export class D2Component {
+  //courses = ['JAVA', 'J2EE', 'ANGULAR', 'HADOOP'];
+  courses = [];
+  cousesAvailable() : boolean
+  {
+      return this.courses.length > 0;
+  }
+}
+
+under app.component.html
+<d2></d2>
+------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd3',
+  template: `
+    <div *ngIf="cousesAvailable(); else noCourses">
+        cousess available
+    </div>
+    <ng-template #noCourses>
+        no cousess available
+    </ng-template>    
+  `,
+  
+})
+export class D3Component {
+  courses = ['JAVA', 'J2EE', 'ANGULAR', 'HADOOP'];
+  //courses = [];
+  cousesAvailable() : boolean
+  {
+      return this.courses.length > 0;
+  }
+}
+
+under app.component.html
+<d3></d3>
+------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd4',
+  template: `
+    <div *ngIf="cousesAvailable(); then coursesList else noCourses">
+    </div>
+    <ng-template #coursesList>
+        cousess available
+    </ng-template>
+    <ng-template #noCourses>
+        no cousess available
+    </ng-template>    
+  `,
+  
+})
+export class D4Component {
+  courses = ['JAVA', 'J2EE', 'ANGULAR', 'HADOOP'];
+  //courses = [];
+  cousesAvailable() : boolean
+  {
+      return this.courses.length > 0;
+  }
+}
+
+
+
+under app.component.html
+<d4></d4>
+------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd5',
+  template: `
+    <div [hidden]="cousesAvailable()">
+        cousess available
+    </div>
+    <div [hidden]="!cousesAvailable()">
+        cousess available
+    </div>
+  `,
+  
+})
+export class D5Component {
+  courses = ['JAVA', 'J2EE', 'ANGULAR', 'HADOOP'];
+  //courses = [];
+  cousesAvailable() : boolean
+  {
+      return this.courses.length > 0;
+  }
+}
+
+
+under app.component.html
+<d5></d5>
+------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd6',
+  template: `
+<button (click) = "changeViewMode('map')">Map Mode</button>
+<button (click) = "changeViewMode('list')">List Mode</button>
+<button (click) = "changeViewMode('set')">Set Mode</button>
+
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">List View Content</div>
+    <div *ngSwitchDefault>some default</div>
+
+</div>
+`,
+  
+})
+export class D6Component {
+    viewMode = "map";
+    changeViewMode(mode)
+    {
+        this.viewMode = mode;
+    }
+}
+
+
+under app.component.html
+<d6></d6>
+------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd7',
+  template: `
+    <ul>
+        <li *ngFor="let c1 of courses">
+            {{ "Course with " + c1.id + "  and name " + c1.name }}
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D7Component {
+    courses = [
+        {id: 1, name: 'java'},
+        {id: 2, name: 'j2ee'},
+        {id: 3, name: 'angular'},
+        {id: 4, name: 'hadoop'}
+    ];
+}
+
+under app.component.html
+<d7></d7>
+------------------------------------------
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd8',
+  template: `
+    <ul>
+        <li *ngFor="let c1 of courses; index as i">
+            index {{ i }} and {{ "Course with id as " + c1.id + "  and name " + c1.name }}
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D8Component {
+    courses = [
+        {id: 1, name: 'java'},
+        {id: 2, name: 'j2ee'},
+        {id: 3, name: 'angular'},
+        {id: 4, name: 'hadoop'}
+    ];
+}
+
+
+
+under app.component.html
+<d8></d8>
+------------------------------------------
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd9',
+  template: `
+    <ul>
+        <li *ngFor="let c1 of courses; even as e1; odd as o1; first as f1; last as l1">
+            {{ "Course with id as " + c1.id + "  and name " + c1.name }}
+            <span *ngIf="e1">[even record]</span>
+            <span *ngIf="o1">[odd record]</span>
+            <span *ngIf="f1">[first record]</span>
+            <span *ngIf="l1">[last record]</span>
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D9Component {
+    courses = [
+        {id: 1, name: 'java'},
+        {id: 2, name: 'j2ee'},
+        {id: 3, name: 'angular'},
+        {id: 4, name: 'hadoop'}
+    ];
+}
+
+
+under app.component.html
+<d9></d9>
+------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd10',
+  template: `
+    <button (click)="addNewCourse()">Add</button>
+    <ul>
+        <li *ngFor="let c1 of courses; even as e1; odd as o1; first as f1; last as l1">
+            {{ "Course with id as " + c1.id + "  and name " + c1.name }}
+            <span *ngIf="e1">[even record]</span>
+            <span *ngIf="o1">[odd record]</span>
+            <span *ngIf="f1">[first record]</span>
+            <span *ngIf="l1">[last record]</span>
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D10Component {
+    courses = [
+        {id: 1, name: 'java'},
+        {id: 2, name: 'j2ee'},
+        {id: 3, name: 'angular'},
+        {id: 4, name: 'hadoop'}
+    ];
+    addNewCourse()
+    {
+        this.courses.push({id: 5, name: 'Spring'});
+    }
+}
+
+
+under app.component.html
+<d10></d10>
+------------------------------------------
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd11',
+  template: `
+    <button (click)="addNewCourse()">Add</button>
+    <ul>
+        <li *ngFor="let c1 of courses; even as e1; odd as o1; first as f1; last as l1">
+            {{ "Course with id as " + c1.id + "  and name " + c1.name }}
+            <span *ngIf="e1">[even record]</span>
+            <span *ngIf="o1">[odd record]</span>
+            <span *ngIf="f1">[first record]</span>
+            <span *ngIf="l1">[last record]</span>
+            <button (click)="removeCourse(c1)">Remove</button>
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D11Component {
+    courses = [
+        {id: 1, name: 'java'},
+        {id: 2, name: 'j2ee'},
+        {id: 3, name: 'angular'},
+        {id: 4, name: 'hadoop'}
+    ];
+    addNewCourse()
+    {
+        this.courses.push({id: 5, name: 'Spring'});
+    }
+    removeCourse(course)
+    {
+        let index = this.courses.indexOf(course);
+        this.courses.splice(index, 1);
+    }
+}
+
+
+
+under app.component.html
+<d11></d11>
+------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd12',
+  template: `
+    <button (click)="addNewCourse()">Add</button>
+    <ul>
+        <li *ngFor="let c1 of courses; even as e1; odd as o1; first as f1; last as l1">
+            {{ "Course with id as " + c1.id + "  and name " + c1.name }}
+            <span *ngIf="e1">[even record]</span>
+            <span *ngIf="o1">[odd record]</span>
+            <span *ngIf="f1">[first record]</span>
+            <span *ngIf="l1">[last record]</span>
+            <button (click)="removeCourse(c1)">Remove</button>
+            <button (click)="modifyCourse(c1)">Modify</button>
+
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D12Component {
+    courses = [
+        {id: 1, name: 'java'},
+        {id: 2, name: 'j2ee'},
+        {id: 3, name: 'angular'},
+        {id: 4, name: 'hadoop'}
+    ];
+    addNewCourse()
+    {
+        this.courses.push({id: 5, name: 'Spring'});
+    }
+    removeCourse(course)
+    {
+        let index = this.courses.indexOf(course);
+        this.courses.splice(index, 1);
+    }
+    modifyCourse(course)
+    {
+        course.name = course.name.toUpperCase();
+    }
+
+}
+
+
+under app.component.html
+<d12></d12>
+------------------------------------------
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd13',
+  template: `
+    <button (click)="loadCourses()">LOad</button>
+    <ul>
+        <li *ngFor="let c1 of courses">
+            {{ c1.name }}
+         
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D13Component {
+    courses;
+    loadCourses()
+    {
+        this.courses = [
+            {id: 1, name: 'java'},
+            {id: 2, name: 'j2ee'},
+            {id: 3, name: 'angular'},
+            {id: 4, name: 'hadoop'}
+        ];
+    }
+}
+
+
+under app.component.html
+<d13></d13>
+------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd14',
+  template: `
+    <button (click)="loadCourses()">LOad</button>
+    <ul>
+        <li *ngFor="let c1 of courses;trackBy: trackCourse">
+            {{ c1.name }}
+         
+        </li>
+    </ul>
+
+  `,
+  
+})
+export class D14Component {
+    courses;
+    loadCourses()
+    {
+        this.courses = [
+            {id: 1, name: 'java'},
+            {id: 2, name: 'j2ee'},
+            {id: 3, name: 'angular'},
+            {id: 4, name: 'hadoop'}
+        ];
+    }
+    trackCourse(index, course)
+    {
+        course ? course.id : undefined;
+    }
+}
+--------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd15',
+  template: `
+    <ng-template [ngIf]="courses.length > 0">
+        <div> some courses available</div>
+    </ng-template>
+    
+    <ng-template [ngIf]="courses.length == 0">
+        <div> no courses available</div>
+    </ng-template>
+
+ 
+    `,
+  
+})
+export class D15Component {
+    courses = [
+            {id: 1, name: 'java'},
+            {id: 2, name: 'j2ee'},
+            {id: 3, name: 'angular'},
+            {id: 4, name: 'hadoop'}
+        ];
+}
+------------------------------
+//leading asterisk
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd16',
+  template: `
+    <div *ngIf="courses.length > 0; then listOfCourses else noCourses"></div>  
+
+    <ng-template #listOfCourses>
+        <div> some courses available from d16</div>
+    </ng-template>
+    
+    <ng-template #noCourses>
+        <div> no courses available</div>
+    </ng-template>
+
+ 
+    `,
+  
+})
+export class D16Component {
+    courses = [
+            {id: 1, name: 'java'},
+            {id: 2, name: 'j2ee'},
+            {id: 3, name: 'angular'},
+            {id: 4, name: 'hadoop'}
+        ];
+}
+-------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd17',
+  template: `
+    <button class="c1 c2 c3">Button</button> 
+    `,
+  styles: ['.c1{color: blue}', '.c2{font-size: 60px}', '.c3{padding: 20px}']
+})
+export class D17Component {
+}
+-----------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd18',
+  template: `
+    <button class="c2 c3" [class.c1] = "isActive">Button</button> 
+    `,
+  styles: ['.c1{color: red}', '.c2{font-size: 60px}', '.c3{padding: 10px}']
+})
+export class D18Component {
+    isActive = false;
+}
+-----------------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd19',
+  template: `
+    <button class="c3" [class.c1] = "isActive" [class.c2] = "isAnotherActive">Button</button> 
+    `,
+  styles: ['.c1{color: red}', '.c2{font-size: 60px}', '.c3{padding: 10px}']
+})
+export class D19Component {
+    isActive = false;
+    isAnotherActive = false;
+
+}
+------------------------------------------------------
+//ngClass directive
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd20',
+  template: `
+    <button class="c1" [ngClass]="{'c2': isActive, 'c3': isAnotherActive}">Button</button> 
+    `,
+  styles: ['.c1{color: red}', '.c2{font-size: 60px}', '.c3{padding: 10px}']
+})
+export class D20Component {
+    isActive = true;
+    isAnotherActive = true;
+
+
+}
+-----------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd21',
+  template: `
+    <button style="background-color: gray;font-size:30px">Button</button> 
+    `
+})
+export class D21Component {
+}
+-----------------------------------
+//style binding
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd22',
+  template: `
+    <button [style.background-color] = "isActive ? 'gray' : 'white'">Button</button> 
+    `
+})
+export class D22Component {
+    isActive = true;
+}
+-----------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd23',
+  template: `
+    <button [style.background-color] = "isActive ? 'gray' : 'white'"
+            [style.color] = "isActive ? 'blue' : 'red'"
+            [style.fontweight] = "isActive ? 'bold' : 'normal'"
+    >Button</button> 
+    `
+})
+export class D23Component {
+    isActive = false;
+}
+--------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd24',
+  template: `
+    <button [ngStyle]="{
+            'background-color' : isActive ? 'gray' : 'white',
+            'color' : isActive ? 'blue' : 'red',
+            'fontweight' : isActive ? 'bold' : 'normal'}"
+    >Button</button> 
+    `
+})
+export class D24Component {
+    isActive = false;
+}
+---------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd25',
+  template: `
+    value : {{batch.course.author}} 
+    `
+})
+export class D25Component {
+   batch = {
+       course: {
+            title: 'java',
+            author: 'raman'
+       },
+       duration: 120,
+       price: 50000
+   }
+}
+----------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd26',
+  template: `
+    value : {{batch.course.author}} 
+    `
+})
+export class D26Component {
+   batch = {
+       course: {
+            title: 'java',
+            author: null
+       },
+       duration: 120,
+       price: 50000
+   }
+}
+-----------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd27',
+  template: `
+    value : {{batch.course.author}} 
+    `
+})
+export class D27Component {
+   batch = {
+       course: null,
+       duration: 120,
+       price: 50000
+   }
+}
+----------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd28',
+  template: `
+    value : <span *ngIf="batch.course">
+                {{batch.course.author}}
+            </span>
+    `
+})
+export class D28Component {
+   batch = {
+       course: null,
+       duration: 120,
+       price: 50000
+   }
+}
+-----------------------------
+//safe traversal operator
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'd29',
+  template: `
+    value : {{batch.course?.author}}
+    `
+})
+export class D29Component {
+   batch = {
+       course: null,
+       duration: 120,
+       price: 50000
+   }
+}
+------------------------------------------
+//ng g d some-directive

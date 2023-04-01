@@ -1,0 +1,224 @@
+webapplication
+----------------
+if core java we can not access on internet,core java project is a stand alone.
+if it is a web application it can be accesses anywhere from internet.
+-webapplication can not run through java commands
+-to run the web application there should be a dedicated server,inside that server you can develop webapplication.
+-servlets should run on server.
+-There are several servers available in the industry.
+-widely used server is Tomcat
+JBOSS,websphere,weblogic
+-latest version is 9.0
+-download tomcat server
+------------
+serch--Tomcat download for windows
+https://tomcat.apache.org/download-80.cgi
+-tomcat server is free to use.
+-tomcat server is open source.
+-tomcat server fully developed in java
+HTTP/1.1 Conector port--7070
+
+--
+http://localhost:7070
+F:\Tomcat8.0\lib
+Servelt-api.jar
+jsp-api.jar
+
+
+F:\Tomcat8.0\lib\servlet-api.jar;
+F:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc5.jar;.
+.
+
+
+. represents current directory.
+update the classpath
+to check
+
+go to cmd
+
+C:> javap javax.servlet.Servlet
+
+http://localhost:7070/app1/test1.html
+
+http://localhost:7070/app1/hello
+
+Day2
+.....
+-more than one url shold not have same name
+http://localhost:7070/app2/s1
+http--protocol
+localhost---current system
+it can be ip address of current system or network name
+-all html/jsp/javascript should be in the project folder not in the body of WEB-INF
+-server restating is required any modification in WEB-INF folder.
+http://localhost:7070/app2/test1.html
+http://localhost:7070/app2/test2.html
+http://localhost:7070/app2/abc
+http://localhost:7070/app2/Servlet1
+-Default executeable method is service()
+-service() access level is protected 
+-it takes two argument
+	-Reading input of the servlet
+	-composing an output that have to send to the browser.
+
+action v
+
+filter
+--------------
+-How we can configure filter specific constraints ?
+-We can read application specific constants inside a filter ?
+
+
+------------
+21/11/18
+-------
+servlvet-api.jar
+--------------------
+1.javax.servlet
+2.javax.servlet.http
+
+
+javax.sevlet
+----------------
+1.Servlet
+2.ServletConfig
+3.ServletContext
+4.ServletRequest
+5.ServletResponse
+6.Generic Servlet
+
+
+javax.servlet.http
+-----------------
+1.HttpServlet
+2.HttpServletRequest
+3.HttpServletResponse
+4.HttpSession
+5.Cookie
+
+
+Servlet
+---------
+
+public interface Servlet {
+  public abstract void init(ServletConfig) throws ServletException;
+  public abstract ServletConfig getServletConfig();
+  public abstract void service(ServletRequest, ServletResponse) 
+			throws ServletException, IOException;
+  public abstract String getServletInfo();
+  public abstract void destroy();
+}
+
+
+ServletConfig
+-------------
+
+
+C:\Users\SUCHITRA>javap javax.servlet.ServletConfig
+
+
+
+public interface ServletConfig {
+  public abstract String getServletName();
+  public abstract ServletContext getServletContext();
+  public abstract String getInitParameter(tring);
+  public abstract Enumeration<String> getInitParameterNames();
+}
+
+
+GenericServlet
+---------------
+
+abstract class GenericServlet implements ______,_________,_______
+{
+	private ServletConfig config;
+	private void init(ServletConfig config)
+	{
+		this.config = config;
+		init();
+	}
+	public void init()
+	{
+	
+	}
+	public ServletContext getServletContext()
+	{
+		return config.getServletContext();
+
+	}
+
+	..............
+	..............
+	..............
+	..............
+
+}
+
+
+
+HttpServlet
+------------
+public abstract class HttpServlet extends GenericServlet
+{
+	public void service(HttpServletRequest request,
+			HttpServletResponse response)throws ServletException,IOException
+	{
+		String methodName = request.getMethod();
+		if("get".equalsIgnoreCase(methodName))
+		{
+			doGet(request, response)
+		}
+		if("post".equalsIgnoreCase(methodName))
+		{
+			doPost(request, response);
+		}
+		-----------
+		-----------
+		-----------
+	}
+}
+public void doGet(HttpServletRequest request, 
+	HttpServletResponse response) throws ServletException, IOException
+{
+
+	throw new SomeException();
+}
+public void doPost(HttpServletRequest request, 
+	HttpServletResponse response) throws ServletException, IOException
+{
+
+	throw new SomeException();
+}
+
+-------------------
+-----------------
+--------------------
+--------------------
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

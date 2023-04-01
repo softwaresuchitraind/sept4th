@@ -1,0 +1,14 @@
+GIT
+===
+
+Need of GIT
+===========
+
+The process of monitoring team members work and activities in the project development
+is called VCS(VersonControl system).
+
+VCS Advantages
+--------------
+-keep track of various versions of file(histroy of file)
+-Resolve conflicts
+-Allows to share code across the multiple team members

@@ -1,0 +1,113 @@
+<form #f="ngForm">
+    <div class="radio">
+      <label for="gender">Gender</label>    
+      <input ngModel 
+            required
+             name="gender" 
+             #gender="ngModel" 
+             type="radio" 
+             value="M"
+             /> Male
+      <input ngModel
+      ngModel 
+             name="gender" 
+             #gender="ngModel" 
+             type="radio"
+             value="F" 
+             /> Female
+      
+    </div>
+    <div ngModelGroup #sk="ngModelGroup" required>
+    <div class="checkbox">
+      <label for="skills">Skills</label>    
+      <input ngModel 
+             required
+             name="skill" 
+             #skill1="ngModel" 
+             type="checkbox" 
+             value="C"
+             /> C
+      <input ngModel 
+      required
+             name="skill" 
+             #skill2="ngModel" 
+             type="checkbox" 
+             value="CPP"
+             /> C++
+      <input ngModel
+      required 
+             name="skill" 
+             #skill3="ngModel" 
+             type="checkbox" 
+             value="Java"
+             /> Java           
+    </div>  
+  </div>
+    <div class="select">
+      <label for="education">Education</label>    
+      <select ngModel 
+             name="education" 
+             #education="ngModel" 
+             >
+          <option value="">Select</option>           
+          <option value="1">BE</option>
+          <option value="2">ME</option>
+          <option value="3">MCA</option>
+      </select>
+    </div>
+     <input type="submit" class="btn btn-primary" [disabled]="!gender.valid || !(skill1.valid || skill2.valid || skill3.valid)"/>
+    <p>{{gender.valid}}</p>
+    <p>{{skill1.valid || skill2.valid || skill3.valid}}</p>
+  </form>
+================================================
+<form [formGroup]="form">
+  <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input 
+          formControlName="firstName"
+          type="text" 
+          class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input 
+        formControlName="lastName"
+        type="text" 
+        class="form-control">
+</div>
+<button class="btn btn-primary" type="submit">Sign Up</button>
+</form>
+
+<!--
+  <div *ngIf="form.get('username').touched && form.get('username').invalid">
+
+  </div
+-->
+
+-------------
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'app-forms8',
+  templateUrl: './forms8.component.html',
+  styleUrls: ['./forms8.component.css']
+})
+export class Forms8Component implements OnInit {
+
+  form = new FormGroup({
+    firstName : new FormControl(),
+    lastName : new FormControl()
+  })
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+// firstName : new FormControl('', Validators.required),
+  
+  
+  
+  -----------------------

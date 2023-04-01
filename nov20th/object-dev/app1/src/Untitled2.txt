@@ -1,0 +1,85 @@
+Object Class
+------------
+
+
+-wait(),notify(),notifyall()
+methods
+--------
+	1. public String toString()
+	2. public boolean equals(Object obj)
+	3. public int hashCode()
+	4. protected void finalise() throws Throwable
+	5. protected Object clone() throws CloneNotSupportedException
+	6. public class getClass()
+	7. public class wait() throws InterruptedException
+	8. public void notify()
+	9. public void notifyAll()
+-9 methods available in Object class.
+-Object class is super class to every class.
+-In every class these 9 methods available.
+-Object class is available in java.                                                                                              lang package and it is a concrete class.
+-No static methods in the object class -all are non static
+
+objects are two types
+
+1-live object
+if object containing minimum one reference variable then that is
+called as live object.
+
+2.Abandoned Object
+-------------------
+
+-If object does not have a single reference variable  then that 
+object is called dead object or abandoned object.
+
+
+-Abandoned objects are eligible for garbage collection.
+-finalise() method is the last step in the object life cycle.
+
+-Garbage collector call finalise() method maximum one time.
+
+-resurected object--gets life that object is not called finalise().
+-Abdoned object is not removing from heap memory as soon as
+it is called by garbage collector.
+it is calling finalise() method and removing that from memory.
+
+
+-System.gc();
+gc() is a static method in the system class.
+2-Runtime.getRuntime.gc();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12/02/18
+14/02/18

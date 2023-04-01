@@ -1,0 +1,774 @@
+webapplication
+----------------
+if core java we can not access on internet,core java project is a stand alone.
+if it is a web application it can be accesses anywhere from internet.
+-webapplication can not run through java commands
+-to run the web application there should be a dedicated server,inside that server
+you can develop webapplication.
+-servlets should run on server.
+-There are several servers available in the industry.
+-widely used server is Tomcat
+JBOSS,websphere,weblogic
+-latest version is 9.0
+-download tomcat server
+------------
+serch--Tomcat download for windows
+https://tomcat.apache.org/download-80.cgi
+-tomcat server is free to use.
+-tomcat server is open source.
+-tomcat server fully developed in java
+HTTP/1.1 Conector port--7070
+
+--
+http://localhost:7070
+F:\Tomcat8.0\lib
+Servelt-api.jar
+jsp-api.jar
+
+
+F:\Tomcat8.0\lib\servlet-api.jar;
+F:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc5.jar;.
+.
+
+
+. represents current directory.
+update the classpath
+to check
+
+go to cmd
+
+C:> javap javax.servlet.Servlet
+
+http://localhost:7070/app1/test1.html
+
+http://localhost:7070/app1/hello
+
+Day2
+.....
+-more than one url shold not have same name
+http://localhost:7070/app2/s1
+http--protocol
+localhost---current system
+it can be ip address of current system or network name
+-all html/jsp/javascript should be in the project folder not in the body of WEB-INF
+-server restating is required any modification in WEB-INF folder.
+http://localhost:7070/app2/test1.html
+http://localhost:7070/app2/test2.html
+http://localhost:7070/app2/abc
+http://localhost:7070/app2/Servlet1
+-Default executeable method is service()
+-service() access level is protected 
+-it takes two argument
+	-Reading input of the servlet
+	-composing an output that have to send to the browser.
+
+action v
+
+
+Day3
+
+........
+http://localhost:7070/app2/s2
+param1 value =null
+param2 value =null
+
+http://localhost:7070/app2/s2?param1=abc
+
+param1 value =abc
+param2 value =null
+
+http://localhost:7070/app2/s2?param2=123
+
+param1 value =null
+param2 value =123
+http://localhost:7070/app2/s2?param2=123&param1=hello
+
+param1 value =hello
+param2 value =123
+http://localhost:7070/app2/s2?param1=123&param2=hello
+
+param1 value =123
+param2 value =hello
+http://localhost:7070/app2/test5.html
+
+Day4
+http://localhost:7070/app2/s5?firstName=abc&gender=m&skill=c&skill=cpp&skill=java&skill=orcl&education=me
+
+
+http://localhost:7070/app2/s5?
+firstName=abc&
+gender=f&
+skill=c&
+skill=cpp&
+skill=java&
+skill=orcl&
+education=be&
+education=me&
+education=mca
+
+
+
+F:\Tomcat8.0\webapps\app2\WEB-INF\src>javac -d ../classes com/lara/*.java
+
+F:\Tomcat8.0\webapps\app2\WEB-INF\src>javac -d ../classes com/lara/*.java
+
+F:\Tomcat8.0\webapps\app2\WEB-INF\src>
+
+Day5
+---------
+--configuring constraints and reading constraints
+--all these constaints like
+driverclass
+url
+username
+password
+-user will not know these
+-u have to show the reduction
+-some constaraints will not changing one user to other user.
+
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>OracleDriver</param-value>
+		</init-param>
+
+		This is available only in the server10
+<context-param>
+	<param-name>driver</param-name>
+	<param-value>Db2Driver</param-value>
+</context-param>
+
+Global to entire project
+in any servlet we can able to read context-param
+
+
+conf folder 
+server.xml
+
+how we can change port number
+ <Connector port="6060" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+
+web.xml
+  <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+ http:/localhost:7070/app2/test5.html
+ http:/localhost:7070/app2/s11
+
+
+ http:/localhost:7070/app2/
+
+ if not available Server looking for welcome file
+
+
+ if local and global welcome filelist is in the same name
+
+
+ Day-6
+ ..............
+ Servlet-api.jar
+ -------
+ 1.javax.servlet		==>generic package
+ 2.javax.servlet.http		==>for http protocol package
+
+
+1.it is a core for any type of protocol
+2.it is specific for some protocol
+
+1.javax.servlet
+---------------
+1.Servlet
+2.ServletConfig
+3.ServletContext
+4.ServletRequest
+5.ServletResponse
+6.GenericServlet
+7.Filter
+8.FilterConfig
+9.FilterChain
+10.RequestDispatcher
+
+
+
+2.javax.servlet.http
+---------------------
+1.HttpServlet
+2.HttpServletRequest
+3.HttpServletResponse
+4.HttpSession
+5.Cookie
+
+Servlet
+-----
+-Servlet is a interface
+
+-the members are
+
+F:\>javap javax.servlet.Servlet
+
+Compiled from "Servlet.java"
+public interface javax.servlet.Servlet 
+
+{
+
+  public abstract void init(javax.servlet.ServletConfig) 
+  public abstract void service(ServletRequest,
+					ServletResponse)
+  public abstract void destroy();
+  public abstract String getServiceInfo();
+  public abstract ServletConfig getServletConfig();
+}
+
+-first 3 are life cycle members
+
+ServletConfig
+------------------
+
+F:\>javap javax.servlet.ServletConfig
+Compiled from "ServletConfig.java"
+
+  public abstract String getServletName();
+  public abstract ServletContext getServletContext();
+  public abstract String getInitParameter(java.lang.String);
+  public abstract Enumeration getInitParameterNames();
+
+
+Serializable=---------------Servlet--------ServletConfig
+				|
+		    
+			    GenericServlet
+				|
+			    HttpServlet
+				|
+			    HelloServlet
+
+-Serializable is a marker interface which does not have any methods
+-Servlet---5 methods
+-servletConfig-4 methods
+
+GenericServlet
+------------
+-GenericServlet implimentation is protocol indepedent implimentation.
+-Service() implimentation which is protocol idepedent.The implimentation 
+-Inside generic servlet service() is abstract method,remaining 8 are implimented.
+-some new methods are added .
+-GenericServlet is abstract class.
+
+GenericServlet
+--------------
+public abstract class GenericServlet implements ___;___;___
+{
+	private ServletConfig config;
+	public void init(ServletConfig config)
+	{
+		this.config = config;//initializing attribute
+		init();
+	}
+	public void init()
+	{
+	}
+	public ServletContext getServletContext()
+	{
+		return config.getServletContext();
+	}
+	-------
+	------
+	-------
+}
+
+-Except service() remaining all methods got implemented.
+-attribute of GenericServlet is used in all methods.
+-attribute of Generic Servlet initialized through argument init()
+-By using GenericServlet protocol specific class can be developed.
+
+HttpServlet
+
+----
+-no abstact methods HttpServlet
+-HttpServlet declared as abstract class
+-We can not create an object to HttpServlet.
+
+skeleton of HttpServlet
+....
+
+public abstract class HttpServlet extends GenericServlet
+{
+	public void service(----,----)
+	{
+		String method = request.getMethod();
+		if("get".equalsIgnoreCase(method))
+		{
+			doGet(______,______);
+		}
+		else if("post".equalsIgnoreCase(method))
+		{
+			doPost(____,____);
+		}
+		........
+		........
+		........
+		public void doGet(______,_____)
+		{
+			throw new SomeException();
+		}
+		public void doPost(________,_______)
+		{
+			throw new SomeException();
+		}
+		.......
+		.......
+		.......
+
+	}
+}
+
+
+-based on the beheviour of Http protocol
+-
+
+Day7
+------
+<load-on-startup>2</load-on-startup>
+How much objects are created
+what is the order of loading the servlets.
+whichever having 1 loading 1st and 2 loading second.
+which ever servlet having least number loaded first.
+
+if two servlets having same <load-on-startup>
+
+life cycle of servlet
+........................
+-for every servlet only one object is created.
+-for every calling only service() method.
+How much objects are created if there are simultanious requests are there.
+only one object.
+init()
+service()
+destroy()
+
+These three methods are available in Servlet interface.
+* Server looking only for argument init() method.
+
+<load-on-startup>1</load-on-startup>
+
+<load-on-startup>2</load-on-startup>
+how many objects created.
+load on startup is not telling how many objects has created.It is telling
+what is the order of loading the server.whichever having one loading 1st and whichever
+is 2 that is loading last.
+Any postive number can be given whichever servlet having least postive number will loaded 
+first and next one next bigger number.
+
+-if two servlets having same <load -on-startup>number in that senario server will take random.
+
+dont take -ve,0s ,common numbers-server will specify the order
+
+-Servlet always looking for argument init();
+
+-Alway override no arg init() as server always looking argument init() of generic servlet.
+inside that two statements are there.no argument init() called.
+-Constuctor is initialized one time.init() is also one time.
+
+-By the time of executing constructor u can not use any setter getter method,so it is not
+advisable.By the time of costructor execution Generic servlets attribute is null only.
+
+Servlet with ecclipse
+-------------------------
+how to develop web application in outside tomcat installation
+
+F:\web-dev\WEB-INF\src> cd F:\web-dev
+
+F:\web-dev>jar cf test.war *
+
+war stands for web archieve
+jar stands for java archieve
+
+jar command available in jdk bin folder.
+war file contains portable form of webapplication
+
+
+ecllipse.
+ctrl+f11
+
+
+requestdispatcher and send redirect
+----------------------------
+
+inside a requestdispatcher there are two methoss
+
+1- forword
+2-include
+
+there are 2 ways to create an object of type requestdispatcher.
+1- relative approach--there we are using request object
+2- absoluet approach--there we are using servletContext object.
+
+*By using requestdispatcher we can make a call to any another resources that another
+resource can be a servlet or an html or jsp.
+
+in case of inclde both the servlets out.println is considerd
+in cse of forword only target Servlet out.println is considered.
+Depending on requirment we can go for either forword or include.
+
+
+Let us assign Servlet1 only for logic ,Servlet2 taking care of presentation.
+inside servet u can do any kind of process..
+
+-In the Servlet2 we can do the presentation.
+
+-requestdispatchers forward is used for webapplication development.
+
+-take the common code of every servlet,include servlet lable in all servlets using
+request dispatchers include
+
+-Request dispatchers include is using for reusability of code.
+
+
+RequestDispatcher
+---------------------
+--It is a server side
+-new request is not generating same requst is forwording
+-we can not redirect to another application
+-Same request is sending to the Servlet2.
+-While making a call from Servlet1 to Servlet2 new request is not generating same request 
+is going.
+-While using requestDispatcher we can able to dispath current resource to 
+another resource of same application.
+-Within the current application we can not send 
+
+
+response.sendRedirect("Servlet2");
+................................
+-It is a client side
+-new request so 1st sevlet 1st name and reverse name is not available
+-we can redirect to another applications resource also.
+taking the response and storing in the servlet object.
+Servlet1 not making Servlet2.
+Servlet1 requst to browser to Servlet2.
+*Because of new request to Servlet2,
+
+Session management/Session Tracking/manageing user session
+-------------------------
+Http is a state less protocol.Every request is a new request.
+because of state less one request processing is got over no connction
+between server and browser.
+
+tcp,ftp state is maintaining.it is stateful.There is a dedicated connection
+from client to server.
+
+programmer has to do something to maintain state of the user explicitely
+there are four approches
+
+1- hidden form fields
+2. URL rewritting
+3. cookies
+4. HttpSession
+
+2.URL rewritting
+--------------------
+through URL rewriting--use method =post
+if method = get it will sending data through query string only.
+whatever data is there a new query string is generated.
+
+if any exiting qureystring is there then use method =post.it will not
+generate the queryString it send the same data.
+
+Servlets session management
+..............................
+cookie
+-------
+-cookie is a small piece of information creating in server maintaing in browser.
+-in java cookie is a Object.
+-Default life of cookie is browser life.
+
+
+The main disadvantage of Cookies is there is an option to block the Cookies in the browser.
+No financial interaction using Cookies internally.
+Usage of cookies is not advisable.
+
+4.HttpSession
+.......................
+
+HttpSession is a interface .
+there are two approaches available to create an object of HttpSession type.
+
+1--request.getSession();
+2--request.getSession(boolean);
+
+HttpSession session =request.getSession();
+we are not storing session object in the response object.
+everything is maintaining in the session itself
+
+
+-in any servlet while calling request.getsession(),it looks for is there any cookie or 
+extra path
+named JsessionID.it dont create a new session otherwise creates a new Session Id.
+
+-Defalut session for Jsession id is browser value.
+
+
+4..Url Rewritting
+-----------
+1---QureyString
+2--Url reWriting through Extra path
+
+Default mechanism--Cookies for Http Session
+
+String path =response.encodeURL("Servlet10");
+
+session object is available for Maxium allowed maximum allowed time.
+
+three ways are there to configure maximum allowable idle time.
+
+1--Server wise
+server--web.xml
+
+ <session-config>
+        <session-timeout>30</session-timeout>
+  </session-config>
+maximim default time is 30 mins
+
+
+2--particular one application
+--------------------------------
+
+Local to one application
+
+<session-config>
+        <session-timeout>10</session-timeout>
+</session-config>
+ app3 --web.xml
+
+ 3--
+ 
+ session.setMaxInactiveInterval(5*60);
+
+ HttpSession session =request.getSession(true);
+ HttpSession session =request.getSession(false);---it wont create create a new session
+ always copy same session.if no exiting session returns null
+
+ Day7
+ -------
+ HttpServletequest
+ Httpsession
+ servletContext
+ ----------
+ are conatiners--we can store the data and then we can use later
+
+ these 4 interface methods are common to all
+
+	1.public abstract void setAttribute(String,Object)
+	2.public abstract Object getAttribute(String)
+	3.public void removeAttribute(String)
+	4.public Enumeration getAttributeNames()
+
+in order to manage the data in the form of attributes.
+public data we can store in context object.
+
+All the listners only for 3 containers
+
+Listners
+............
+- Listeners are only for request,session and context.
+-Two types of Listners available
+
+1.Life cycle Listners
+2.Attribute management Listners
+
+-for entire application there will be only one servletContext object.
+whenever application is starting
+
+-while stoping an application servletContext object is destroyed.
+
+-throughout the life cycle of servlet servletContext object is available.
+
+Listners for servletContext
+
+ServletContextListener --interface
+
+public void contextInitialized(ServletContextEvent arg0)  { 
+        
+    }
+
+2nd type of listner
+ServletContextAttributeListener--interface
+
+
+Liners of session
+++++++++++++++++++++++
+
+select the content --ctrl+shift+c--to comment in web.xml
+ 
+HttpSessionBindingListener
+-binding type of listners not required to register in web.xml
+-whenever entity object of bindying type 
+valueBound()
+valueUnbound()
+
+Migration type of the Listners
+
+...................
+public class SessionMigrationListeners implements HttpSessionActivationListener
+
+if multiple servers are availabe
+
+when it is migrating from one server to another then
+
+sessionDidActivate()
+sessionwillPassivate()
+these are used by server admistator .
+ 
+ Why do we requrie cluster management ?
+
+ load balancing---if more projects are running.
+
+ -if one server is down still ur application is available---fail over scenario
+ -migarion type of Listners
+
+
+ requestType listners
+ .......................
+ login request
+ registration request
+
+ --A class can implement with any number of interfaces.
+
+ Filter API
+ ---------+++-----
+ -it is availabe in javax.Servlet package.
+ -Filters are not specific to one protocol.
+ -It is common to every protocol.
+ -Under filter Api there are 3 interfaces
+ 1--Filter
+ 2--FilterChain
+ 3--FilterConfig
+ -Filters are used for executing some preexecution to any of the resource,
+ some post execution to any of the resource or both.
+ -resource can be Html,Servlet or jsp.
+ -Filter can be developed in Html also.
+ -Define a filter assign to any html/servlet/jsp.
+ -when ever we call to that autometically 
+ -Every filter class implemets Filter interface
+ init()
+ dofilter()
+ destroy()
+-filters can not be called from the browser.
+under filter mapping u have to name html/jsp.
+ <url-pattern>/Filter1</url-pattern>
+
+ -By default every filter having auto load on startup.
+ We should not specify explicitely.
+
+ -Once filter is developed that filter can be assigned to any number of resources.
+
+ -Filters are reusable components
+ -filter can be mapped to any number of resources.
+ -For the same filter we can assign to any number of resouces.
+ -from the same resource u can map any number of resources.
+ -one filter can map to any number of resources and for the same resouece any filter
+
+f1-pre
+f2-pre
+from Servlet1
+f2-post
+f1-post
+
+why always same order
+in side web.xml which is mapped 1st
+
+
+.............................
+-we  can specify constraints to specific filter.
+
+-we can assign a filter in four different ways
+
+1--
+
+How may ways are there to call to Servlet7?
+1-Straight way
+2-entire appilication if NullPointerException is arise
+
+There are two types of headers are available.
+
+1-Request HEADER
+-broweser properties whatever sending to server.
+-What ever browser information not sending to the request .
+-cookies are sending to browser properties to server.
+
+2-RESPONSE HEADER
+some description about your response--type of the response.
+-how browser should be handled the response.
+
+
+Wrappers
+...........--app8
+
+
+wrappers also two types
+1--Request wrapper
+------------------------
+Request wrapper is used for changing any method behaviour.
+
+2--Response wrapper
+-----------------------
+Response wrapper is used for changing any response method behaviour.
+
+
+
+
+
+
+10/05/19
+
+
+ServletConfig	Servlet	 Serializable  --------------interfaces
+
+implements
+
+	GenericServlet  ---class
+
+
+	HttpServlet-------class     -------FtpServlet(not avalable in Servlet-Api) ---TcpServlet(not available in Servlet-Api)
+
+
+
+	HelloServlet
+    
+
+C:\Users\SUCHITRA>javap javax.servlet.ServletConfig
+Compiled from "ServletConfig.java"
+public interface javax.servlet.ServletConfig {
+  public abstract java.lang.String getServletName();
+  public abstract javax.servlet.ServletContext getServletContext();
+  public abstract java.lang.String getInitParameter(java.lang.String);
+  public abstract java.util.Enumeration<java.lang.String> getInitParameterNames();
+}
+
+
+
+C:\Users\SUCHITRA>javap javax.servlet.Servlet
+Compiled from "Servlet.java"
+public interface javax.servlet.Servlet {
+  public abstract void init(javax.servlet.ServletConfig) throws javax.servlet.ServletException;
+  public abstract javax.servlet.ServletConfig getServletConfig();
+  public abstract void service(javax.servlet.ServletRequest, javax.servlet.ServletResponse) throws javax.servlet.ServletException, java.io.IOException;
+  public abstract java.lang.String getServletInfo();
+  public abstract void destroy();
+}
+
+
+
+
+-9 methods has to implements in GenericServlet ,but 8 methods implemented,
+service() method is not implemented, because of this GenericServlet declared as abstract.
+
+-HttpServlet is a subclass to GenericServlet.
+
+
+
+

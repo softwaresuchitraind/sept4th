@@ -1,0 +1,18 @@
+public class System 
+{
+	public static PrintStream out;
+
+	static
+	{
+		//out initializing to target console
+	}
+	public static setOut(PrintStream out)
+	{
+		System.out = out;
+	}
+	..................
+	..................
+}
+
+
+//Skeleton of System class

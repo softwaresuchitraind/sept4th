@@ -1,0 +1,74 @@
+GITHUB
+OPENSOURCE/LICENCED VERSION
+
+IBM CLEAR CASE
+
+version control tool
+
+jdk 1.0
+    1.2
+    1.3 ..... jdk 11
+
+
+	remote server
+
+	   project
+
+senior
+
+
+dev   dev2 dev3 dev4 dev5 
+
+
+https://git-scm.com/download.hyml
+
+
+GITHUB
+
+PUBLIC---
+
+PRIVATE--THEN MONRY
+
+GITHUB.COM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

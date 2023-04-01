@@ -1,0 +1,167 @@
+<web-app>
+	<servlet>
+		<servlet-name>s1</servlet-name>
+		<servlet-class>com.lara.Servlet1</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s1</servlet-name>
+		<url-pattern>/s1</url-pattern>
+		<url-pattern>/Servlet1</url-pattern>
+		<url-pattern>/abc</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s2</servlet-name>
+		<servlet-class>com.lara.Servlet2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s2</servlet-name>
+		<url-pattern>/s2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>s3</servlet-name>
+		<servlet-class>com.lara.Servlet3</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s3</servlet-name>
+		<url-pattern>/s3</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s4</servlet-name>
+		<servlet-class>com.lara.Servlet4</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s4</servlet-name>
+		<url-pattern>/s4</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>s5</servlet-name>
+		<servlet-class>com.lara.Servlet5</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s5</servlet-name>
+		<url-pattern>/s5</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>s6</servlet-name>
+		<servlet-class>com.lara.Servlet6</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s6</servlet-name>
+		<url-pattern>/s6</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>s7</servlet-name>
+		<servlet-class>com.lara.Servlet7</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s7</servlet-name>
+		<url-pattern>/s7</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>s8</servlet-name>
+		<servlet-class>com.lara.Servlet8</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s8</servlet-name>
+		<url-pattern>/s8</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>s9</servlet-name>
+		<servlet-class>com.lara.Servlet9</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s9</servlet-name>
+		<url-pattern>/s9</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>s10</servlet-name>
+		<servlet-class>com.lara.Servlet10</servlet-class>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>OracleDriver</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s10</servlet-name>
+		<url-pattern>/s10</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>s11</servlet-name>
+		<servlet-class>com.lara.Servlet11</servlet-class>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>MySQLDriver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>Country</param-name>
+			<param-value>India</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s11</servlet-name>
+		<url-pattern>/s11</url-pattern>
+	</servlet-mapping>
+
+<context-param>
+	<param-name>driver</param-name>
+	<param-value>Db2Driver</param-value>
+</context-param>
+
+<context-param>
+	<param-name>reduction</param-name>
+	<param-value>200%</param-value>
+</context-param>
+
+
+<servlet>
+		<servlet-name>s12</servlet-name>
+		<servlet-class>com.lara.Servlet12</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s12</servlet-name>
+		<url-pattern>/s12</url-pattern>
+	</servlet-mapping>
+
+<servlet>
+		<servlet-name>s13</servlet-name>
+		<servlet-class>com.lara.Servlet13</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>s13</servlet-name>
+		<url-pattern>/s13</url-pattern>
+	</servlet-mapping>
+
+
+	 <welcome-file-list>
+        <welcome-file>test1.html</welcome-file>
+    </welcome-file-list>
+
+
+</web-app>
+
+
+
+

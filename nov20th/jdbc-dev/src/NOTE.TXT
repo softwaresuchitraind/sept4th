@@ -1,0 +1,150 @@
+3/05/15
+----------
+04/05/18
+---------
+to interact with excel file we require poi libraries.
+
+https://poi.apache.org/download.html
+
+DROP TABLE PROJECT;
+CREATE TABLE PROJECT(ID NUMBER UNIQUE, NAME VARCHAR2(90));
+
+------------
+JDBC CRUD
+
+DROP TABLE GENDER;
+CREATE TABLE GENDER(ID NUMBER UNIQUE, NAME VARCHAR2(90));
+INSERT INTO GENDER VALUES(1,'MALE');
+INSERT INTO GENDER VALUES(2,'FEMALE');
+
+DROP TABLE SKLILL;
+CREATE TABLE SKILL(ID NUMBER UNIQUE, NAME VARCHAR2(90));
+INSERT INT SKILL VALUES(1,'C');
+INSERT INT SKILL VALUES(2,'C++');
+
+DROP TABLE EDUCATION;
+CREATE TABLE EDUCATION(ID NUMBER UNIQUE, NAME VARCHAR2(90));
+INSERT INTO EDUCATION VALUES(1,'BE');
+INSERT INTO EDUCATION VALUES(2,'MCA');
+
+
+DROP TABLE PROJECT;
+CREATE TABLE PROJECT(ID NUMBER UNIQUE, NAME VARCHAR2(90));
+INSERT INTO PROJECT VALUES(1,'AXIS BANK CORPORATION');
+INSERT INTO PROJECT VALUES(2,'S BANK CORPORATION');
+
+
+DROP SEQUENCE EMPLOYEE_SEQ;
+create sequence employee_seq incremented by 1;
+
+DROP TABLE  EMPLOYEE;
+create table employee(id number, first_name varchar2(90),
+			last_name varchar2(90),
+			date_birth timestamp,
+			joining_date date,
+			username varchar2(90),
+			password varchar2(90),
+			gender_id number,
+			latest_education_id number,
+			project_id number,
+constraint employee_pk primary key(id),
+constraint employee_fk1 foreign key(GENDER_ID) REFERENCES GENDER(ID),
+CONSTRAINT EMPLOYEE_FK2 FOREIGN KEY(LATEST_EDUCATION_ID) REFERENCES
+					EDUCATION(ID),
+CONSTRAINT EMPLOYEE_FK3 FOREIGN KEY(PROJECT_ID) REFERENCES
+					PROJECT(ID),
+			);
+
+
+-----------------------------------------------------------------
+DROP SEQUENCE ADDRESS_SEQ;
+CREATE SEQUENCE ADDRESS_SEQ INCREMENTED BY 1;
+DROP TABLE ADDRESS;
+
+CREATE TABLE ADDRESS(ID NUMBER,
+		    HOUSE_NO VARCHAR2(90),
+		    STREET_NAME VARCHAR2(90),
+		    CITY VARCHAR2(90),
+		    STATE VARCHAR2(90),
+		    EMPLOYEE_ID NUMBER,
+CONSTRAINT ADDRESS_FK1 FOREIGN KEY(EMPLOYEE_ID) REFERENCES EMPLOYEE(ID));
+
+
+------------------------------------------------------------------
+
+CREATE TABLE EMPLOYEE_SKILL (EMPLOYEE_ID NUMBER, SKILL_ID NUMBER,
+CONSTRAINT EMPLOYEE_SKILL_FK1 FOREIGN KEY(EMPLOYEE_ID) REFERENCES EMPLOYEE(ID),
+CONSTRAINT EMPLOYEE_SKILL_FK2 FOREIGN KEY(SKILL_ID) REFERENCES SKILL(ID));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

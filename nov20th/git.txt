@@ -1,0 +1,86 @@
+
+https://github.com/softwaresuchitraind/jan2023
+https://github.com/softwaresuchitraind/jan2023.git
+#which git
+#git --version
+#git config --global user.name "softwaresuchitraind"
+#git config --global user.email "software.suchitra@gmail.com"
+#git config --global push.default "simple"
+#git clone <source-centralrepo> <dest-localrepo>
+#git clone https://github.com/softwaresuchitraind/jan2023.git
+#git clone https://github.com/softwaresuchitraind/jan2023.git workspace00
+#pwd
+#clear
+# cd d:
+#mkdir mine
+#cd mine
+#git status
+#git add <file> or git add .
+#git commit -m "first change for dummy release"
+#ls -a ===to show with hidden files
+#git log -show all commit id/transactions
+#git log -number
+#git log -1
+#git log --oneline
+#git log --oneline -1
+#git show commitid
+#git branch
+#git branch IOS
+#git checkout <branchName>
+#git checkout IOS
+#git merge <srcbranch> <destbranch>
+#git cherry-pic <commit-d>
+#ls-ltr
+#git stash
+#git stash list
+#git branch
+#git branch <branch-name>
+
+$ git stash list
+stash@{0}: WIP on IOS: 0a6d662 DOINEEDTHIS 03
+stash@{1}: WIP on IOS: 0a6d662 DOINEEDTHIS 03
+
+# git stash apply stash@{1}
+#you can not apply stash if the files are modified.
+#git stash clear
+#git reset --soft(repository reference)---------->not undo in staging area nor working directory
+#git reset --mixed(repo+staging)----------------undo from the staging area
+#git rest --hard(repo + SA +WD)
+
+****reset is used only before you commit.
+
+**** After commit we can user revert option[Before Push]
+#git revert <commit-id> - It will not delete commit, it will create a new commit with older data
+
+
+#git checkout <commit-id> ----it is only for trasversing
+
+# git revert of revert to get your commit
+
+#git tag
+# git tag -a "R1.2" -m "comment for release 1.2" 730fea1
+#git show R1.2
+#git push --tags
+#git tag
+# git tag -d R1.3
+#git remote -v
+remote reject error
+# git remote add demo /d/mine/CLASSROOM/Git/workspace01
+# git pull demo main
+
+softw@LAPTOP-RPFSUIJ8 MINGW64 /d/mine/CLASSROOM/Git/workspace02 (main)
+$ git clean -n
+Would remove 1.log
+Would remove unittest.log
+
+softw@LAPTOP-RPFS
+
+
+
+
+
+
+
+
+
+

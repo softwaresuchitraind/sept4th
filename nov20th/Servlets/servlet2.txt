@@ -1,0 +1,627 @@
+7/05/2018
+-------------
+webapplicatios
+--------------
+-Any application serving for request is called as webapplication.
+Any application receiving requests.processing and returning the results is called web request.
+to process webrequest we require web application.
+
+web request
+-----------
+-Any request making from web browser.web applications required for procesing of web requests.
+-core java projects are for one user or multiple requests of one user.
+-core java projects are stand alone projects.
+- web application can be accesed anywhere form the internet all over the world.
+-we can not run web applications through java command.
+-to run the web application -we shuld require a web server.
+- in the industry lot of web servers available. Among all widely used servers are
+1- Tomact
+2-Jboss
+3-web logic
+4-web sphere
+
+-In order to develop web application 1st and formost is webserver.
+-Tomcat is developed by Apache open source.
+-it is developed purely in java.
+-It is a open source - what ever source file is there u can down load also.
+-It is free to use.
+
+downloading and installation and configuration
+----------------------------------------------------
+https://tomcat.apache.org
+
+http://localhost:7070
+
+
+updating class path
+
+-ecclipse is not require class path.
+-class path is required for javac and java command.
+
+F:\Tomcat8.0\lib\servlet-api.jar;.
+-At the end semicoln is not mandatory.
+
+C:\Users\SUCHITRA>echo %classpath%
+
+C:\Users\SUCHITRA>javap javax.servlet.Servlet
+
+After installation u can modify the port number of server in the conf folder.
+
+http://localhost:7070/app1/test1.html
+
+
+08/05/2018
+----------
+-Any type of web application no Servlets and jsp then that type of web application is called as 
+static web application.
+-if one Servlet or jsp is there that is called as dynamic web application.
+
+directry structure of project
+app2
+\
+WEB-INF
+\
+src,classes,lib,web.xml
+
+
+-Servelt is a public class.
+
+F:\Tomcat8.0\webapps\app2\WEB-INF\src>javac -d ../classes pack1/*.java
+
+-web.xml is also called as deployment descriptor. we need to describe every servelt.
+-All the characters are in lower case.
+
+
+http://localhost:7070/app2/hello
+
+9/05/2018
+--------
+-same servlets can have multiple url pattern.servlet can be called through any one of the urlcpattern.
+-url-pattern can be same as servlet name or class name.
+-every urlattern should be unique.
+
+-for one servelt pattern two servlets can not be asigned.
+-to achieve the security we can provide differnet url pattern to different customers.
+
+
+http://localhost:7070/app2/abc
+http://localhost:7070/app2/xyz
+http://localhost:7070/app2/s2
+
+11/05/2018
+----------
+http://localhost:7070/app2/servlet2
+First Namenull
+Last Namenull
+
+http://localhost:7070/app2/servlet2?firstName=hello&lastName=vijay
+First Name : hello
+Last Name : null
+
+http://localhost:7070/app2/servlet2?firstName=hello&lastName=vijay
+First Name : hello
+Last Name : vijay
+-Query string starts with ?, & is separator. 
+
+
+12/05/17
+------------------
+
+http://localhost:7070/app2/s6?firstName=&lastName=&age=&email=&username=&password=&address=&education=be
+
+http://localhost:7070/app2/s6?firstName=abc&lastName=xyz&age=22&email=a%40lara.com&username=hello&password=lara&address=BTM&gender=m&skill=cpp&skill=orcl&education=mca
+
+
+http://localhost:7070/app2/s6?firstName=&lastName=&age=&email=abc%40lara.com&email=xyz%40lara.com&username=&password=&address=&skill=c&skill=cpp&skill=java&skill=orcl&education=be
+
+http://localhost:7070/app2/s6?firstName=&lastName=&age=&email=&email=&username=&password=&address=&education=be&education=mca&education=mba
+
+
+http://localhost:7070/app2/s6?firstName=abc&lastName=xyz&age=33&email=abc%40lara.com&email=xyz%40lara.com&username=lara&password=lata&address=BTM&gender=m&skill=c&skill=cpp&skill=java&skill=orcl&education=be&education=mca&education=mba
+
+{firstName=[abc],
+lastName=[xyz],
+age=[22],
+address=[btm],
+password
+
+
+-we can not read constants of one servlet with another servlet.
+//setting constant for one servlet only
+<servlet>
+		<servlet-name>s7</servlet-name>
+		<servlet-class>com.lara.Servlet7</servlet-class>
+		<init-param>
+			<param-name>country</param-name>
+			<param-value>India</param-value>
+		</init-param>
+		<init-param>
+			<param-name>reduction</param-name>
+			<param-value>20%</param-value>
+		</init-param>
+
+</servlet>
+
+constant for entire applicatiom.
+--------------------------------
+
+<context-param>
+</context-param>
+
+15-05-18
+--------------
+
+sevlet life cycle
+-----------------
+2018-05-15 19:14:05 Commons Daemon procrun stdout initialized
+Servlet()
+init(config)
+service
+service
+service
+service
+service
+destroy
+
+
+
+<load-on-startup>1</load-on-startup>
+
+-whichever servlet having a  <load-on-startup> those servlets life starting while starting the server.
+
+1---in which order Servlet object is created first.
+2--Servlet object is created second 
+least positive number.
+
+no mater load-on-startup only one object of sevelet created.
+
+16-05-2018
+---------------
+1. servelet-api
+--------------
+	1.javax.servlet
+	2.javax.servlet.http
+
+2. javax.servlet
+-----------------
+1.Servlet
+2.ServletConfig
+3.ServletContext
+4.ServletRequest
+5.ServletResponse
+6.GenericServlet
+7.Filter
+8.FilterConfig
+9.FilterChain
+10.RequestDispatcher
+
+
+3.javax.servlet.http
+----------------------
+	1.HttpServet
+	2.HttpServletRequest
+	3.HttpServletRsponse
+	4.HttpSession
+	5.Cookie
+4. members of Servlet
+-------------------------
+  1.public abstract void init(javax.servlet.ServletConfig)
+  2.public abstract ServletConfig getServletConfig();
+  3.public abstract void service(ServletRequest, ServletResponse) 
+	throws javax.servlet.ServletException,java.io.IOException
+  4. public abstract String getServletInfo();
+  5.public abstract void destroy();
+
+5. members of ServletConfig
+-------------------------------
+
+  1. public abstract String getServletName();
+  2. public abstract ServletContext getServletContext();
+  3. public abstract String getInitParameter(String);
+  4. public abstract Enumeration  getInitParameterNames();
+
+
+
+Serialiczable	Servlet	ServletConfig
+	     \     |     /
+	    GenericServlet
+		   |
+	     HttpServlet
+		   |
+	     HelloServlet
+
+-Serializable is a marker interface havling no members like Clonable.
+-Sevelt interface contains 5 methods - 3r life cycle methods
+
+-9 abstract methods inheriting to GenericServlet.
+-Except service method remaining 8 methods got implemented.
+-not only 9 inherited methods but also several incorporated methods.
+-Among all the methods of GenericServlet only service() is a abstract method.
+
+-whatever protocol used that are common behaviour for all methods except service().
+
+6.GenericServlet.java
+----------------------
+
+public abstract class GenericServlet implements __,__,__
+{
+	private ServletConfig config;
+	public void init(ServletConfig config) throws ServletException
+	{
+		this.config = config;
+		init();
+	}
+	public void init()
+	{
+	}
+	public ServletContext getServletContext()
+	{
+		return config.getServletContext();
+	}
+	public String getInitParameter(String name)
+	{
+		return config.getInitParameter(name);
+	}
+
+	......................................
+	......................................
+	......................................
+	......................................
+
+
+
+}
+
+-every getter method of GenericServlet depending on global attribute and argument init();
+-every member of Generic servelt inheriting to HttpServlet.
+
+7.http methods
+----------------
+	1.GET
+	2.HEAD
+	3.POST
+	4.PUT
+	5.DELETE
+	6.CONNECT
+	7.OPTIONS
+	8.TRACE
+
+8.HttpServlet.java
+-----------------------
+public abstract class HttpServlet extends GenericServlet
+{
+	public void service(HttpServletRequest r1,
+			    HttpServletResponse r2)
+			    throws ServletException, IOException
+	{
+		String method = r1.getMethod();
+		if("get".equalsIgnoreCase(method))
+		{
+			doGet(r1, r2);
+		}
+		else if("post".equalsIgnoreCase(method))
+		{
+			doPost(r1, r2);
+		}
+		.........................................
+		.........................................
+		.........................................
+
+		public void doGet(HttpServletRequest r1,
+					HttpServletResponse r2)
+		throws ServletException, IOException
+		{
+			throw new SomeException();
+		}
+		public void doPost(HttpServletRequest r1,
+					HttpServletResponse r2)
+		throws ServletException, IoException
+		{
+			throw new SomeException();
+		}
+
+		......................
+		......................
+		......................
+		......................
+
+	}
+}
+
+-Even though no abstact method is there in HttpServlet is declared as abstract.
+-do not override service() in the HelloServlet(),
+
+17/05/2018
+-------------
+-through hyperlink request only go through method = get
+
+
+18/05/2018
+-----------
+
+RequestDispatcher
+--------------------
+-RequestDispatcher is a Interface.
+-it is available in javax.servlet package.
+-It is protocol indepedent.
+-It is used for dispatching a request from a servlet to any other resource.that another resource can be
+a servlet or html or jsp.
+
+-There are 2 ways to get a object of type RequestDispatcher.
+1--By using Request Object
+2--By using ServletContext Object.
+
+-After getting a RequstDispatcher we can use RequestDispatcher in two different ways
+
+1-- for forwarding
+2-- for retriving
+
+22/05/18
+------------
+relative way--using requst object giving a call to target resource
+absolute way-- if u r using servlet context object
+
+
+F:\web-dev>jar cf test.war *
+
+24/05/18
+----------
+
+25/05/2018
+-------------
+
+In case of Http protocol--stateless protocol-unable to maintain state of user
+-previus request information is not available.
+
+-Every request is indepedent.
+-under one user session there can be multiple session.
+-By default http protocol not maintaining user session.
+
+How to maintain a Session ?
+-------------------------------
+There are 4 different approches available to maintain a user session.
+1--hiddenform field
+2-while rewriting the url we have to use method = post as 
+method = get generates a new queystring that existng query strig overided.
+
+29-05-18
+------------
+Cookie
+-----
+-Cookie is a small piexe of information creating in the server and
+maintaining by the browser.
+-Default life of cookie is a browser life.
+-//Default life of cookie is browser life there is a way to modify it
+		c1.setMaxAge(60);
+
+-A long number
+-How to block cookies.
+
+
+-HttpSession internally using Cookies mechanism.
+
+
+30*05*18
+------------
+How server using a specific session-id for its user ?
+ maxinuminteractive time
+
+ server-web.xml
+
+   <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+-Inside server 3 types of containers
+
+1- request object
+2- session object
+3- context object
+
+public void setAttribute(String key, Object obj);
+public Object getAttribute(String key);
+public void removeAttribute(String key);
+public Enumeration getAttributeNames();
+
+
+these three objects have life cycle also.
+
+
+31/05/2018
+----------
+Listeners
+-When server is starting context object is initialized.contextInitialised method is called.
+ContextDestroy() method is called.
+
+request object
+
+31/05/2018
+--------------
+Filters
+-----------
+-Every filter class should implement Filter interface.
+-Filter interface containing 3 methods
+init(FilterConfig config)
+DoFilter
+
+04/06/18
+-----------
+
+FilterDispatcher Types
+------------------------
+
+-What are the different dispatcher types to a filter.
+-The default dispatcher type is request.
+-4 dispatcher types
+request
+forword
+include
+error
+
+-error page configuration in web.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+05/06/2015
+...........
+res.setContenttype(text/html);
+res.setContenttype(appication/msword);
+
+Servlet3.java
+--------------
+File f1 = 
+	new File("C:\\users\\public\\Pictures\\Sample pictures\\Koala.jpg");
+FileInputStream fin = new FileInputStream(f1);
+byte[] bytes = new byte[(int)f1.length()];
+fin.read(bytes);
+ServletOutputStream out = response.getOutputStream();
+out.write(bytes);
+out.flush();
+
+
+Servlet4.java
+-------------
+
+RequestHeaders
+------------------
+Breowser information we are reading---------------- reading --browser properties
+
+
+ResponseHeaders
+
+-----------------
+instruction to the browser from a server
+
+
+private int count;
+doGet
+{
+	PrintWriter out = response.getWriter();
+	out.println(count ++);
+	response.setIntHeader("refresh", 5);
+
+}
+
+
+-autometically refreshes after 5 secs.
+-witout our intervention brower is refreses 
+------------
+Headers
+-------
+Request Header
+ResponeHeader--Instruction to the browser from a Servlets
+
+
+Wrappers
+--------
+RequestWrapper
+ResponseWrapper
+
+app6
+
+class
+ReqWrapper.java
+------------------
+package com.lara;
+public class ReqWrapper extends HttpServletRequestWrapper
+{
+	public ReqWrapper(HttpServletRequest request)
+	{
+		super(request);
+	}
+	@Override
+	public String getParameter(String name)
+	{
+		String s1 = super.getParameter(name);
+
+		if(s1 == null)
+		{
+			s1 = "no value to" +namme;
+		}
+
+		return s1;
+	}
+
+}
+
+
+Class
+------
+ResWrapper.java
+----------------
+
+public class ResWrapper extens HttpServletResponseWrapper
+{
+	public ResWrapper(HttpServletRespone response)
+	{
+		super(response);
+	}
+
+	@Override
+	public void setContentType(String type)
+	{
+		super.setContentType("text/html");
+	}
+
+}
+
+
+webcontent
+------------
+test1.html
+--------
+
+<form action ="Servlet1">
+
+Parameter1 : <input type = "text" name= "param1" /><br/>
+<input type="submit" value="submit" />
+</form>
+
+Servlet1.java
+-------------
+doGet()
+{
+
+PrintWriter out = response.getWriter();
+String s1 = request.getParameter("param1");
+String s2 = request.getParameter("param2");
+out.println("parameter1:" + s1+ "<br/>");
+out.println("parameter1:" + s2+ "<br/>");
+response.setContentType("text/plain");
+
+}
+
+
+Filter1.java
+------------
+
+doFIlter()
+{
+
+HttpServletRequest hReq =(HttpServletRequest)request;
+HttpServletResponse hRes =(HttpServletResponse)response;
+ReqWrapper wReq = new ReqWrapper(hReq);
+ReqWrapper wRes = new ReqWrapper(hRes);
+chain.doFilter(wReq, wRes);
+
+}
+
+
+
+To develop a war file
+take tha path of app1
+D:\Tomcat8.0\webapp\app1>jar cf hello.war *
+
+* represents every file and folder of the current directory.
+
+

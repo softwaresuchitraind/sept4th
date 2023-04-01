@@ -1,0 +1,139 @@
+25/02/18
+-for browser based applications user interface will be developing by using html.
+-Server side .net/php/cgi.
+-HTML is a basic concept to develop browser based application.
+Angular js released 2010
+used for mobile and browser
+Angular 2--2016
+
+Whats are the softwares required ?
+-We need to install node server
+
+general meaning of node --joining multiple directions into onle location
+Two functionalisity can be acheived
+-It is a run time environment to java script code from outside a browser.
+1--node js ---server
+2-- it having  a utility/tool/command ------npm---node package manager
+through npm we can download to the java script libraries which are available
+across the server on internet.
+
+--Install node.js
+cmd>
+C:\Users\SUCHITRA>node --version
+v8.9.4
+-It is not angular version ,it is node servers version
+>through angular cli we will be interacting with the node server.
+
+-Node server makes two task
+-npm is a separate software which is available in node server.
+
+
+C:\Users\SUCHITRA>npm --version
+5.6.0
+
+-use npm command in order to install angular cli.
+  >npm install -g @angular/cli
+
+  -g	globally
+  -Angular is not a library it is a framework.
+
+  -Jquerey is a frame work.
+
+  -jdk is a library.
+  -jdbc is a library.
+
+  -on top of jdbc ,hibernate is there.
+
+to check installation is proper or not
+
+>ng --version
+
+
+Angular CLI: 1.7.3
+Node: 8.9.4
+OS: win32 x64
+
+-this is CLI version --not the angular version.
+
+G:\angular-workshop\development >ng new hello-world
+
+-now angular project is created.
+
+
+G:\angular-workshop\development >hello-world>ng serve
+this is to be installed inside project folder.
+
+http://localhost:4200
+
+-visual studio code is very convinient for the IDE.
+
+https://code.visualstudio.com/
+
+G:\angular-workshop\development >hello-world>code .
+
+e2e --end to end 
+
+
+node_modules-- all third party libraries.
+src--sources
+
+-Every angular project should contain minimum one component and on module.
+
+assets--any icons or images
+
+environments --both for development and production.
+
+favicon.ico
+
+app.component.spec.ts--
+
+{{title}} ----interpolation
+
+
+G:\angular-workshop\development\hello-world>ng g c hello
+
+
+g ---global properties to the component
+
+c--component
+name of the component.
+
+session -2
+--------------
+-Angular component require typescript class
+
+G:\angular-workshop\development\hello-world>npm install -g typescript
+G:\angular-workshop\development\hello-world>tsc -- version
+G:\angular-workshop\development\hello-world>cd ..
+
+G:\angular-workshop\development>mkdir typescript
+
+G:\angular-workshop\development>cd typescript
+
+G:\angular-workshop\development\typescript>code hello1.ts
+
+
+-every java script code is valid in type script.
+-type script is superset of javascript.
+
+
+G:\angular-workshop\development\typescript>tsc hello1.ts
+G:\angular-workshop\development\typescript>tsc hello1.ts
+G:\angular-workshop\development\typescript>dir
+G:\angular-workshop\development\typescript>dir
+
+G:\angular-workshop\development\typescript>code hello1.js
+
+G:\angular-workshop\development\typescript>node hello1.js
+Hello to all
+
+es6 ===>2015  ====> es2015
+es6 ===>2015  ====> es2015
+es6 ===>2015  ====> es2015
+
+9/7/18
+----------
+
+12-11-17
+---------------
+

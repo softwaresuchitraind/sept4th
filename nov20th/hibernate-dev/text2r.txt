@@ -1,0 +1,57 @@
+-In place of JDBC we will be using Hibernate
+-in case of jdbc is a library not a framework.
+-Hibernate is replaceing jdbc.
+
+download hybernate distribution
+-------------------------------------
+
+https://sourceforge.net/projects/hibernate/
+
+
+19/05/2018
+-------------
+persist() method return type is void , it simple saving record the database
+it wont return identifier to the client program.
+
+20/05/18
+------------
+
+2nd approach to read multiple records from
+a specific table is query API.
+
+-under query API two types of queries
+1-HQL--Hibernate Query language
+2-SQL--Structured Query language.
+
+HQL
+---
+
+-In the hibernate query language we have to use 
+class name in place of table name.
+
+-We have to use attribute name of the class in place
+of column name of the tabble.
+
+26/05/2018
+-----------
+insted of separate hbm file we can do the configuration
+inside pojo class itself that type of configuration 
+is called Annotation configuration/programatic configuration.
+
+-If rerentiion policy is runtime if person is loading
+this annotations is also loading
+
+source
+class
+runtime
+
+pack1--has a relationship
+
+has- a relation also called as component mapping.
+
+load()/get()
+---------
+1st argument pojo class and second argument primary key.
+
+
+

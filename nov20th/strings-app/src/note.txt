@@ -1,0 +1,68 @@
+Strings/1-03-18/3-3-18
+--------
+-In order to represent multiple characters there are multiple approches
+1-character array
+2-String class
+3-StringBuffer class
+4-StringBuidler
+
+-In java we are not using character Array to represent multiple chsracters.
+-As String,StringBuffer,StringBuilder provides all the way to represent multiple characters.
+2---String
+...........
+-It is a concrete class.
+-available in java.lang package.
+-it is a final class.
+-It is implementing Serializable-String objects are eligible for serialization.
+-It is implementing Comarable interface---it is purely to achive sharping.
+-Object class toString() is overided in the String Class.
+-Bacause of this we can able to print content of the String object to its reference variable.
+-hasCode() and equals() methods got overided.because of this we can identify int value based on
+the content.
+-we can create a String object without a new operator.
+-we can add to String object by using + operator.
+-String objects are immutable-We can not change once we created.
+03/03/18
+Skeleton of concat method
+.........................
+
+public String concat(String arg)
+
+{
+	return this+arg;
+
+}
+
+
+M104
+--------
+s1 = a ab abc abcd =13
+s2 = ""
+i =0
+
+
+M542
+-------------
+permutation("","abc")
+.....................
+	permutation("a","bc");
+	---------------------
+		permutation("ab","c");
+		------------------------
+		permutation("abc",""); =======>abc
+
+		permutation("ac","b");
+		--------------------------
+			permutation("acb",""), =========>acb
+
+
+
+	permutation("b","ac");
+	---------------------------
+
+
+
+	permutation("c","ab");
+
+
+

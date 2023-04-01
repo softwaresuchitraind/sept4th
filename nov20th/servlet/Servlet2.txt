@@ -1,0 +1,8 @@
+Listener Api
+-----------
+There are two types of Listners available
+1-Lifecycle listner
+2-attribute change listners
+
+Listner development
+------------------

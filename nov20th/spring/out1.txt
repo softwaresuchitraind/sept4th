@@ -1,0 +1,42 @@
+
+How Spring is Evolved ?
+====================
+Middleware Service/Secondary logics/Aspects
+------------------------------------------
+eg : security
+	Transaction management
+	Logging
+	Auditing
+
+1995----->Applets ------->Gaming
+-------------------------------------
+1996------>Java classes + java beans ---->Bussiness logic/Service logic
+Limitations
+----------
+- > we can not apply middleware services
+- > Allows only local clients
+=------------------------------------
+1998---EJB---> B.logic/Service Logic
+Advantages
+--------
+a) Allows both local and remote client
+b) Allows to enable or disable middle services
+c) Gives built-in middleware services and also allows to use third party or server managed 
+   middleware services.
+Disadvanages
+----------------
+a) EJB coms are heavy weight
+b)EJB components are complex and use
+c) Heavy weight Server and Containers are required to run ejb components
+
+
+
+2003 --------->Spring Framework
+===============================
+Advantages
+---------
+->Ligtht weight
+->Supports ordinary classes/ordinary interface based programming
+-Allows to enable or disable middleware services
+-Gives built-in middleware services and also allows to use third party server managed middleware
+service.

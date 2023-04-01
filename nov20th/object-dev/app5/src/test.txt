@@ -1,0 +1,11 @@
+
+
+
+
+
+obj1 ----------------i =0/90, a1 = null;------x =10;
+
+-How we can make deep copy operation even though class A contains shallow copy
+
+18/02/18
+---------

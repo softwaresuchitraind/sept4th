@@ -1,0 +1,104 @@
+   Collection API
+--------------
+
+-Addressing the limitations of Array
+
+Limitations of Array
+....................
+
+-Array size is fixed , u can not change- once u defined then size can not be changed.
+-Arrays are only for storing one type of element--in one array we can store only one type
+of element---we can not store multiple type of elements---All elements shold be same type.
+-Array exclusively introduced for stoing multiple same type of elemet.
+-Manimulating elemnets of an array is very difficult--no built-in methods available.
+u can not find switable methods.
+
+-Arrays not having any built-in methods
+
+-Lot of operations required
+
+-Development time increases
+-jdk 1.2 onwords uses collection-API
+-Based on requirement u should choose one switable method
+
+13/03/18
+--------------
+-In the collection API 4 strings available
+
+1.List
+2.Queue
+3.Set
+4.Map
+
+
+		 ---------------Collections---------
+		 |		    |		 |	 |
+		List		  Queue		Set	Map
+		  |	/           |		  |
+	      AL,V,LL		   PQ         HS, LHS, SS
+						      |
+						      NS
+						      |
+						      TS
+
+
+* Map is not a type of collection
+
+				Map
+				 |
+		HashMap,HashTable,LinkedHashMap --classes  | sortedMap --Interface
+								|
+							     NavigableMap--Interface
+								|
+							     TreeMap---Class
+
+
+-In TreeMap sorting is based on keys
+---<U have to sort all the based on the values>
+
+
+HashSet,LinkedHashSet---class implementing Set
+SortedSet is a interface --it is extending with the Set interface.
+NavigableSet is another interface extending with SortedSet
+TreeSet is a class implimenting NavigableSet interface.
+
+
+-In AL,V and LL,sorting can be done collection.sort()
+-PriorityQueue ,AutoSorting no need to cal any method
+-All these 4 are interfaces
+-List,Queue,Set extending Collection,Collection is also an interface
+-Map is not extending to Collection but Map is also a part of Collection framework.
+-Entire collection framework available in the java.util package
+
+-What is the Significane of List
+-
+List
+...
+
+-List is ordered Collection.
+-order of addition is preserving in the list
+what is the meaing of preserving--same order u will get in the order u adding.
+
+-Inside a list every element is assigning with one unique index.
+-While adding 1st 0 index and onwords
+-we donot specify index number while adding .
+autometically indexes are providing.
+-List is allowing duplicates
+-List is allowing null values
+-Inside a list 3 important classes
+
+		1.ArrayList
+		2.Vector
+		3.LInkedList
+
+-All are implimenting List interface.
+-3 are the concrete classes
+-LinkedList is also a type of Queue also.
+
+15/03/18
+***********
+
+
+
+
+

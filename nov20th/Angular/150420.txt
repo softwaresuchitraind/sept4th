@@ -1,0 +1,149 @@
+Angular development
+-------------
+1.node
+---------
+nodejs.org
+>node --version
+>npm --version
+
+
+2.angular cli
+>npm  install -g @angular/cli
+>ng --version
+
+
+
+3.vs code
+-------------
+code.visualstudio.com
+>code --version
+
+uninstall
+-----------
+>npm uninstall -g @angular/cli
+>npm cache clean --force
+>ng -- version
+
+5.creating a new project
+ng new app1
+ng serve
+
+6.create a new component
+ng g c hello1
+ng generate hello1
+ng g component hello1
+
+7. create a component without spec file
+
+ng g c hello2 --skipTests
+
+create a component without spec file and inline styllling
+
+ng g c hello3 --skipTests -is
+create a component without spec file and inline styllling and inline componemts
+
+
+ng g c hello4 --skipTests -is -it
+
+==========================================================
+Typescript
+
+1.number
+2.string
+3.boolean
+4.any
+
+VSCode
+=============
+> code . --disable-gpu
+
+
+Access Specifiers
+----------------
+
+1.private
+2.protected
+3.public
+
+
+Bindings
+-------
+
+Template driven forms
+------------------------
+
+http client
+-----------------
+http://localhost:3000/persons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

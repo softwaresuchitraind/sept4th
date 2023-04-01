@@ -1,0 +1,73 @@
+Classpath 
+------------
+-classes developed in other project using in current project we require classpath.
+-re usablitiy purpose.
+F:\>cd F:\app1\src
+
+F:\app1\src>javac -d ../classes lara/A.java
+
+F:\app1\src>cd ../classes
+
+F:\app1\classes>jar cf ../lib/app1.jar *
+
+
+jar--java Archive
+-----------------
+-it is similar to zip.
+-in java 
+jar file is nothing but library.
+-jar command is used to create a jar file
+
+F:\app1\src>javadoc -d ../docs lara/A.java
+F:\app1\src>javadoc -d ../docs lara/*.java
+-if java code contains syntax error then java documentation can not be developed.
+
+
+-specifying commands location to command prompt is require path.
+-Specifying third party clases to the javac command.
+-command prompt purpose we r setting path~~~
+
+-cp : classpath
+-classpath
+
+path can be set in 3 ways.
+4 ways to set classpath
+
+1-for one cmd only
+
+F:\app2\src>javac -d ../classes -cp F:\app1\classes B.java
+
+only for one command not visible to other command---command wise
+F:\app2\src>javac -d ../classes -cp F:\app1\lib\app1.jar B.java
+
+2nd way
+--------
+F:\app2\src>set classpath=F:/app1/classes
+- it is only for one command prompt.
+
+F:\app2\classes>java B
+Error: Could not find or load main class B
+
+F:\app2\classes>echo %classpath%
+F:\app1\lib\app1.jar
+
+-generally java command looking for class file.if class path is set then
+-java command serching for every class in the classpath only not in the current directory
+
+-javac command is not looking for class path---if thrid party application.
+
+F:\app2\classes>set CLASSPATH=F:\app1\lib\app1.jar;.
+. represents current directory
+
+F:\app2\classes>java B
+from app1.lara.A
+done
+
+-wherever u update classpath use . at the end
+
+place app1.jar in the following folder
+
+F:\jdk1.8.0_151\jre\lib\ext
+
+
+

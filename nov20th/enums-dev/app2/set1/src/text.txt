@@ -1,0 +1,13 @@
+-Enums are introduced in jdk 1.5U
+-Enum can member of a java file like a class, interface and  Annotation
+-While compiling class files generating Enum also.
+-We can develop Enum as a member of a Class also.
+-Enums are mainly used for grouping similar kind of fixed number of ordered constants-----
+if something is static and final then it is constant.
+-All the constants of the enum should be represented to a java valid identifier.
+-Every constant of the enum is a unique.
+-All the constants should be represented to a valid java identifier.
+-All the constants should be separated comma as a separator.
+-Every constant is having a unique index which is starting from 0.
+-Inside a enum we can incorporate fields,constructors and methods also.
+

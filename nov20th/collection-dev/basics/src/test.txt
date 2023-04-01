@@ -1,0 +1,214 @@
+-Collection is a interface
+
+	
+	Collection
+	
+List	Queue	Set Map
+
+-List Queue, Set Map is a interface
+
+-Map is not extending Collection interface.
+-List, Queue, Set extending collection interface
+-enhanced for loof is for Array and Collection type not to the Map.
+
+-In case of List, Queue and Set we can store the element.
+-In case of Map, an identifier is choosing as key.
+
+
+- inside a List we can store any number of elements
+
+-What is the significance of a List
+
+-Every element having one unique index.
+
+order is maintained in the List.
+
+-It is preserving order of addition.
+
+-To maintain first-in first out we will be using Queue.
+
+-Always looking for first-in first out.
+
+Set
+---
+
+-Significance of Set is avoiding duplicates.
+-No order is preserving.
+
+
+Map
+----
+
+-In case of Map, the main significane is key --value pair.
+
+-In case of List ---unique Index
+Inside a Map----Unique key.
+
+
+List and Queue both have get methods
+Queue and Set does not have get Methods.
+
+  
+
+		Collection
+
+		     |			Collections
+		    List
+
+
+	ArrayList   Vector  LinkedList
+
+
+
+-ArrayList, Vector and Linked list are the classes under List type.
+
+
+-ArrayList and LinkedList both are non-synchronized.
+-Vector is a Synchronized.
+
+-LinkedList also non-Synchronized.
+-In the multithreded environment use Vector.
+
+-StringBuffer is Synchronized.
+
+-ArrayList and LinkedList both are non-synchronized.
+
+
+-Arraylist internally using Array itself to store the element.
+-Linkedlist is not using array, it is using Linked in Structure.
+
+- Because ArrayList using Array-----accessing elements in the 
+arraylist is very effective. not in the LinkedList.
+
+Random Access is very effective.
+
+
+-Insert operation is not happening in affecting in the ArrayList.
+
+-in case of ArrayList frequent insertions is not advisable.
+
+-If it is multithreded environment use Vector, Vector also internally
+use array to store the element.
+
+
+
+What is the difference between Collection, Collections and Collection-API.
+
+-Collection is a intercface containing common members of List, Set 
+and Queue type.
+
+-Collections is a utility class which is containing all static methods.
+
+-Collection API is a frame work or group of activities containing
+collection of Container classes.
+
+
+collection--general term like a multple
+Collection- interface  list,Set ,Quese
+Collections--class containing all static methods
+
+
+		Collection
+
+		    |
+
+	List		Queue
+		          |
+	  |     /
+	LinkedList	 PriorityQueue
+
+
+
+
+-LinkedList having dual feature ---
+u can use LinkedList as List or Linked List as Queue.
+
+-While adding elements elements are getting autometically sorted.
+
+-PriorityQueue is autosorted one.
+-Wherever elements are there elements should be comparable type.
+
+separate comparator objects u have to supply.
+
+
+		Collection
+
+		    |
+		   Set
+	/           |	 \
+HashSet	   LinkedHashSet    SortedSet
+				 |
+				NavigableSet
+				 |
+
+				TreeSet
+
+
+-To avoid the uniqueness we will be using Set.
+-LinkedHashSet is preserving the order of addition.
+
+
+_ TreeSet is used for sorting Method.
+
+-In case of TreeSet while adding elements in the TreeSet
+autometically elements are getting sorted.
+
+
+-While adding elements that elemnet should be Comaparable type or
+a separate Comparator object we have to specify.
+
+
+-In throughout the set to avoid the duplicates we have to use
+hashCode() and equals() method used throughout the Set.
+
+
+
+
+
+		Map
+
+HashMap	 HashTable  LinkedHashMap  SortedMap
+
+					|
+				  NavigableMap
+
+					|
+				     TreeMap
+
+
+
+
+
+
+-LinkedHashMap preserving order of addition.
+-TreeMap is used for sorting purpose.
+
+
+-In throughout the Map keys should be unique.In general we can not assign 
+two elements to the same key.
+
+
+-for keys uniqueness purpose we r using hashCode() and equals().
+
+-Whatever sorting is used that are used for key value but not element value.
+
+-Keys should be Comparable type or we can supply comparator object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

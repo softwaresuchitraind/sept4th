@@ -1,0 +1,31 @@
+What is the difference between Exception Type and Error type.
+-----
+If java statement is producing any abnormal codition then Exception Object is rising.
+Assume there is a abnormal condition due to some external resources not due to java
+condition.It can be external class --This is due to error object.it is rising by running.
+Error object is rising.
+
+* Both can be handled.
+
+checked and unchecked.
+---------------------------
+*Every error type and all Runtime exception type is Unchecked.
+*compiler will not be expecting error type or RuntimeException type.
+* compiler doen not have any information.
+*compiler not forcing us to incorporate try and catch.
+*without try and catch copiliation is success.
+
+Checked
+---------
+All the subclasses of exception.
+Compiler knows every information about these seven classes.
+-compiler checks whether try catch provided or not if try catch provided then cs.
+
+-Throwable class and Exception are semichecked.Sometimes both are acting as checked and sometimes
+both are acting as unchecked.
+
+-Some subclases of Exception are check and some are unchecked that is why ..
+-Some subclasses of Throwable are checked and some are unchecked.
+
+
+

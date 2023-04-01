@@ -1,0 +1,12 @@
+public class ArrayList < E >
+{
+	public void add(E element)
+	{
+		// some stmt
+	}
+
+	public E get(int index)
+	{
+		//some stme
+	}
+}

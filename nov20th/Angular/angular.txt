@@ -1,0 +1,424 @@
+- by using java script we can validate data.
+-dveloping java script is very lenthy.
+-reusing is very difficult.
+-lot of functions has to develop
+-java script is not a pure object oriented language.
+-Debugging,testing very very difficult.
+-java script functions very difficult.
+-oraganizing multiple java script functions very difficult.
+-debugging, testing is difficult.
+-customer requrirement is very difficult.
+-Jquery---2007--13,14,15 using Jquery
+-Jquery is framework building on top of the java script.
+-from the Jqury library lot of built-in functions
+-development time can be reduced.
+-organizing,debugging,testing  difficult.
+-jQuery is noting but one java script file .
+-problem with object orientd.
+-Afterwords Angular is used. It is similar to Jquey.it 1.0 version.
+-2010 Angular js is used.
+-it is switable for both browser based and mobile based client.
+-Because of that it is more popular.
+-Object orented is missing,organizing,testing etc is difficult.
+-
+
+2016,Another verson of Angular2.
+Angular js and Angular 2 is entirely different. there is no comparision 
+between angular js and Angular2.
+-Angular2 using type Script is one of the Object orientd programming.
+-Typescript is a super set of java script.
+-Any valid java script code valid in type script also.
+-Every browser knows only java scipt.
+-No browser knows type script.
+-Type script compiler will be transferd into java script code.
+Angular js 
+2.0,2.1,2.2,2.3
+....................not 2.4 **** straightway 4.0
+-The resons in inside angular several modules are there  haveing several versions.
+-Every modules having reutter module 3.3
+-To avoid confusion they release 4.0
+--It release 2017
+-immediately after 5.o
+-UI development.
+-type script.
+-UI developer/Full Stack Developer
+
+
+-Node server
+-----------------
+NPM---Node packageing module
+-It can download any kind of java script libraries.
+-NPM tool- it is taking care of downloading java script code.
+-biggest source is java script code.
+-to interact with the node server we should require command based client.(CLI)
+command lable interface
+-Throgh the command based client 
+-editor     <Editplus/eclipse>
+-we shold go for IDE type--Visual Source Code
+https://nodejs.org/en/
+node.js
+............
+E:\nodejs\
+
+Command prompt
+--------------
+>node --version
+>npm install -g @angular/cli
+//npm is one of the tool available in node server
+//to install angular cli
+//npm angular based client
+//through npm based we can make a server based.
+
+if u want to uninstall
+
+>npm uninstall -g @angular/cli
+
+After installation take it out whether installation is proper or not.
+
+>ng --version
+
+
+editor
+................
+
+https://code.visualstudio.com/
+
+E:\MicrosoftVSCode
+-u can call IDE not editor
+
+Download--save
+install in -----E:\microsoftvscode
+-unchech lunch visual studio code
+>cd angular2
+angular4>ng new hello
+project hello createrd
+>cd hello
+open a new command prompt to recocgnize new path
+G:\angular4\hello> code .
+E:\angular4\hello> echo %path%
+E:\angular4\hello> ng serve
+compiled successfully
+go to browser
+http://localhost:4200/
+
+Day2
+--------
+e2e--end to end
+mainly for test case purpose
+node_modules
+--------
+only for third party libraries
+src-place to develop source code
+-
+inside src
+components and modules
+....
+component is a combination of presentation logic ,html mark up
+and the data.
+-one component containing css also and data.
+This component can reuse in the same project or in the other projects
+-multiple components making one module.
+-module containing multiple components.
+-Inside app there is one component and one module.
+-componet css,html,processing and data,presentatipn
+-component having three different files
+
+1-css--cosmetic components
+2-html
+3-type script file--app.component.ts
+this is used for programming or processing any logic
+--to store or maintaing the data
+-we will be developing the class-model data-bethaviour
+
+-In any programming lanh=guage boot strapping methos
+
+main.ts----boot stapping/main executing file
+index.html---welcome file
+
+Typescript
+----------
+E:\angular2\type-script>npm install -g typescript
+E:\angular2\type-script>tsc --version
+E:\angular2\type-script>code test1.ts
+E:\angular2\type-script>tsc test1.ts
+E:\angular2\type-script>dir
+
+E:\angular2\type-script>node test1.js
+hello to all
+
+
+--in case of java script single character data type is not there .
+u have to specify single code or
+
+E:\angular2\type-script>code test2.ts
+E:\angular2\type-script>tsc test2.ts
+E:\angular2\type-script>dir
+E:\angular2\type-script>node test1.js
+
+
+There is a clear difference between var and let.
+-both var and let available in typescript and java script.
+-In any programming languages 
+var key word is available in outside the block but in the current function.
+-var scope is a nearest function,let scope is a nearest block.
+
+constraints
+-similar kind of fixed constants we can use enum.
+
+Day3
+..........
+
+G:\angular4\typescript\app2>code test1.ts
+
+G:\angular4\typescript\app2>code test2.ts
+
+G:\angular4\typescript\app2>tsc test2.ts
+
+G:\angular4\typescript\app2>dir
+ Volume in drive G is New Volume
+ Volume Serial Number is 802E-6247
+
+ Directory of G:\angular4\typescript\app2
+
+15-02-2018  11:16    <DIR>          .
+15-02-2018  11:16    <DIR>          ..
+15-02-2018  11:16               163 test2.js
+15-02-2018  11:15               160 test2.ts
+               2 File(s)            323 bytes
+               2 Dir(s)  154,883,256,320 bytes free
+
+G:\angular4\typescript\app2>node test2.js
+i am from tast2: hello
+5
+
+* how we can tranfer data to the function
+--------------------------------------------
+Day4
+....
+25*02*18
+
+
+-usage of typescript class in another file
+--------------------------------------------------------------------------------------------
+-In case of angular every development in a component.
+\angular4\typescript\app5>tsc hello1.ts
+
+G:\angular4\typescript\app5>node hello1.js
+Hello to all
+
+G:\angular4\typescript\app5>cd ..
+
+G:\angular4\typescript>cd ..
+
+G:\angular4>mkdir components
+
+G:\angular4>cd components
+
+G:\angular4\components>ng new g app1
+
+>dir
+>ng new app1
+
+thease components to be registered in the moddule.
+
+app.component.ts
+------------------
+prgramming ---processing-display logic 
+
+-component is one of the built in type script class.
+-while using any builtin class we have to use with library.
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'app';
+}
+
+-we have to decorate our component through components.
+-one component can have any css files.
+
+G:\angular4\components>cd app1
+
+G:\angular4\components\app1>code .
+
+G:\angular4\components\app1>ng serve
+G:\angular4\components\app1>ng g c hello
+
+
+
+template: '<h1>Hello to all,{{title}}</h1>',
+this is called interpolation.
+-
+components
+logic,programming ,processing,data modelling
+-this component can be reused wherever u want.
+
+Singleton
+------------
+-create one object,keep using same objet whereever required.
+
+ctrl+shift+i ----console
+
+21-02
+-------
+package.json
+5.2.0
+
+^---maximmum
+2--minor
+0--patch nos
+
+-explaning about libraries and versions in the current project
+-install boot stap library
+-downloading any open source commaned
+
+>npm
+downloading and installing specified library inside our project
+
+>npm install bootstrap --save
+
+--save is used for updating in the package.json
+
+node_modules
+----------
+
+third party modules and libraries.
+~ ---dilti
+
+-inorder to refer any libraries in node_module u have to use ~
+
+class binding
+--------------
+
+Style-binding
+
+22*02*18-not working
+---------------
+
+
+23-02-18
+-----------
+Two way binding
+-changes in the view reflecting in console.
+-We have to import forms module explicitely.
+
+predefined files availble for formating property file
+
+
+Developing predefined file
+-------------------------
+
+
+shodow talk
+
+feb-26
+feb27
+feb28
+
+Difference be
+
+<div> is producing a new line
+<span> after executing control is in the same line.
+
+01/03/18
+class binding
+-null is used in submersive purpose in UI development.
+-Exception message fully submersive in UI.
+03/03/2018---A
+------------
+faqs
+----
+Which portion of webapplication can be developed using angular
+frontend portion
+
+-Type script code trs[aring/compiling to js code and then js code
+is running into browsers memory.
+
+How to run java script code ouside a browser ?
+-By using node command from the node server
+
+What is the typescript compiler command name ?
+tsc 
+
+What are the keywords used for declaring a local variable?
+var and let
+
+what is the difference between var and let ?
+1-var is a local to the current function/method.
+2-let is a local to the currnt defination block.
+
+-var is used to assign any datatype value.
+let is used for only one type of the value.
+
+
+What are the datatypes available in the type scriprt ?
+Number
+String
+boolean
+any
+
+-This datatype is only for arguments and global variables not for local variab;e
+-If any argument or datatype is not specified default is int.
+
+How to represents constants in the typescript ?
+There are two ways available.
+const
+enum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

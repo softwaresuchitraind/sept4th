@@ -1,0 +1,386 @@
+1806
+---------
+javascript/jquery/angularJS ==>
+	1.hard to maintain while growing the size of project
+	2.organised reusability is not more extent
+	3.difficult to write test cases
+	4. no oops concept
+
+angular ==> its a framework for building client applications in
+	   html, css, javascript/typescript.
+
+-typescript is a object oriented programming language
+
+pre-requisites
+----------------
+HTML,CSS, java script and any one OOP language
+w3schools.com
+------------
+1.HTML
+2.CSS
+3.HTML5
+4.java script
+
+software setup
+==============
+
+1. nodejs
+---------
+nodejs is server used
+	1.to run javascript code outside a browser
+	2.to use npm command
+
+nodejs.org
+D:\nodejs
+autometicall path environment variable is updating
+after installation
+node --version
+npm --version
+
+-npm is a indepedent plugin inside a node server
+
+2.angular cli
+-------------
+it contains tools required to dev angular app.
+npm install -g@angular/cli
+npm uninstall -g/angular/cli
+ng --version
+ng new hello-world
+
+3.vs code
+-----------
+IDE
+code.visualstudio.com
+D:\msvscode
+updates path autometically
+
+
+
+19/06/18
+-------------
+
+E:>angular-june>ng new hello-worlc
+E:>angular-june>cd hello-world
+E:>angular-june>hello-world>code .
+
+starting node
+-------------
+
+E:>angular-june>hello-world>ng serve
+
+browser
+localhost:4200
+
+folders and files in the app
+----------------------------
+e2e--end to end test cases
+node_modules--all third party library or framework or software
+which are downloaded.
+-bootstrap frame work is not available.
+-if u have requirement we can download and install any third party
+libraries we have to use npm command
+
+src--application code with module and componects
+all components should be registed in the component
+one module and any number of components
+every app should contain one module and also one component.
+
+assets ==> static files like images, icons and so on
+environments => both production and development environments
+facicon.icon ==>favorite icon which is displaying in the welcome window
+index.html ==>welcome file.
+main.ts ==> default executable file
+		starting point of our app
+		boot straping the main module
+		like main method in the programming language
+
+polyfills.ts : filling javascript features which are using by angular 
+		and not supporting by browser.
+
+
+style.css : global css file. it is available to all the componets.
+	    Every component having specific local css file.
+
+package.json ==> configuring all dependencies.
+
+tsconfig.json ==> setting to typescript compiler.
+	Any kind of configuration related to typescript compiler
+
+inside a Angular there is a compiler
+
+webpack ==>bulild automation tool
+mainly it is used for compiling type script into java script.
+
+
+HMR==> Hot Module Replacement
+after modifying autometically +save --webpack tool autometically replacing
+
+
+Angular Js ==>2010
+Angular2   ==>2016
+	  2.0, 2.1, 2.2, 2.3, 2.4
+
+"angular/animations":"2.3.0"
+"@angular/common":"2.3.0"
+"angular/compiler":"2.3.o"
+"@angular/router": "3.3.0"
+
+to make all libraries to under one version
+
+Angular 4 ===>march 2017
+Angular 5 ===> Nov 2017
+
+20-06-18
+--------------
+
+G:\angular-june\hello-world>ng g c hello1
+
+21-06-2018
+----------------
+String interpolation
+
+-ng command creating four files.
+
+for a single component one file is sufficient.
+
+day5:
+22/05/18
+--------
+-In every component developent minimum one class
+is required that class is developed in typescript
+
+Typescript
+-------------
+-We can consider typescript as a super set of javascript.
+
+any valid javascript code is also valid in typescript code.
+
+
+typescript  ==> Advantages over java script
+	strong typing(but datatype is optional)
+	object oriented
+	Identifying some errors @ compile time
+	Great tooling like VS code.
+
+Limitations
+-----------
+No browsers can't understand typescript.
+
+We should use any 
+TypeScript tranpiler/compiler into javascript code by the compiler.
+which is understood by any browser.
+
+
+
+npm install -g typescript
+
+
+webpack tool
+
+
+G:\angular-june\typescript>code test1.ts
+
+G:\angular-june\typescript>tsc --version
+Version 2.9.2
+
+G:\angular-june\typescript>node test1.js
+Hello to all
+
+
+
+
+26/06/2018
+----------------
+
+constructor overloading is not possible.
+
+Dependency injection--if u wanted argument consructors
+inside a class.
+
+by default typescript class is not  qualified as 
+component class. for component class we have to provide
+a component decorator.
+
+specifying class A in the provider.
+
+
+
+27/06
+*********
+
+Typescript
+---------------
+private
+protected
+public
+
+- if u r not providing it is public by default.
+
+constructor argument can take access level.
+
+-if constructor argument has aceess specifier it is acting as
+attributes to the same class.
+
+-whenever u modify anything in the component class
+for every change reflect will be repopulating.
+
+
+28/06/18
+-------------
+
+Argument of the constructor and method
+
+3/7/18
+---------
+
+
+Eventy binding ""
+property binding[]
+class binding
+
+---------------
+
+Style binding
+class binding
+event binding
+
+
+05/07/2018
+------------
+
+-ngModel is a directives available in the formsModule is avialble for Two way binding.
+
+-if we modify ngModel that is reflected to param1
+
+property binding--chnges not reflecting
+
+
+06/07/2018
+----------
+
+>ng g p cusom2
+
+09/07
+--------directives
+
+10
+-------
+
+how to develop a form
+------------
+bootstrap---several csss classes available in bootstrap
+
+G:\angular-june\hello-world>npm install bootstrap -save
+
+npm command is used for downloading and installing
+-save is used for downloading and installing in the current project
+
+updated in nodes_module -------boot strap folder
+
+26/08/08
+--------
+
+jsonplaceholder.typecode.com/posts
+
+localhost:4200
+
+reading data http service
+
+
+-If you create any service through Ng command
+it is writing @injectable.
+
+
+
+
+12-09-18
+---------
+Angular binding 
+test19.component.ts
+
+template variables
+------------------
+test
+
+
+Two way binding
+-----------------
+
+test field value assigning to v1 and
+v1 value assigning to text field.
+
+-This can be done by two way binding.
+
+we have to import FormsModule of 
+in app.compomet.ts
+
+and NgModule.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

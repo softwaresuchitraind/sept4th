@@ -1,0 +1,1 @@
+<nav> -to display multiple elements in a row in a cosmetic manner

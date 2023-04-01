@@ -1,0 +1,10 @@
+prototype Design pattern
+---------------------------
+-if bean scope is prototype--internally using prototype design pattern
+
+What is prototype?
+--------------------
+
+-Object with same data--what ever objects is available creating a new object in the same state--same content
+is nothing but prototype.
+

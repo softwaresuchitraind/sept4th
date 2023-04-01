@@ -1,0 +1,52 @@
+primitive data type		wrapper class
+--------------------		--------------
+byte				Byte
+short				Short
+int				Integer
+long				Long
+float				Float
+double				Double
+char				Charater
+boolean				Boolean
+
+* for every primitive datatype there is a corresponding wrapper class.
+*All wrapper classes are available in the java.lang package.
+*All wrapper classes are final,we can not develop subclass to any wrapper class.
+*All wrapper classes are implimenting Serializable interface.Because of this we can
+serialize wrapper objects into persitant media.
+*All wrapper classes are implimenting to Comparable interface.Because of this we can 
+start similar kind of wrapper objects.
+*In all wrapper classes toString() of Object class got overided.
+Because of this we can print wrapper object content through its reference variable.
+*In every wrapper class hashCode() and equals() methods of Object class got overide.
+Because of this we can identify equality based on the content.
+
+*usage
+.....
+1.Wrapper classes are used for wrapping primitive contents to Objects.This is called boxing.
+2.unboxing-unwrapping primitive content from the Object.
+3.Converting String to primitive(Except Char datatype)
+String can not be converted to character.Why?
+
+4.converting primitive to String
+
+
+		Object
+
+		   |
+		   |
+		Number
+		   |
+		   |
+
+byte ,Short, Integer, Long, Float, Double
+
+Among all the wrapper classes, 6 are representing numbers.
+all these are subclass to number,Number is subclass to Object class.
+
+
+* primitive can be autometically converted
+*one wrapper can not be coverted to another.
+
+
+

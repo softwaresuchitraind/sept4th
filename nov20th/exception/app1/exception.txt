@@ -1,0 +1,2 @@
+while executing java program if any abnormal condition arise that rised exception
+object shold be handled somewhere otherwise flow will be terminated.

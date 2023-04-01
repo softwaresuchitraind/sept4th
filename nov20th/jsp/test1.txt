@@ -1,0 +1,51 @@
+16/04
+-jsp file should be developed inside project folder
+http://localhost:7070/jsp-app1/test1.jsp
+
+-To insert java code 4 different ways are there to incorporate java in jsp
+
+Directives
+------------
+
+There are 3 directives available in the JSP.
+1--page ---------for importing
+2--include
+3--taglib
+
+
+
+
+Scriplet
+----------
+* A part of method ---any numeber of method statements developed in scriplet
+
+
+expression
+-----------
+--printing
+
+
+declarations
+------------
+-defining global variable--indepedent variable
+
+
+11-06-18
+-----------
+
+
+4scop
+[page
+request
+session 
+application
+
+default---page
+
+
+
+
+expression language
+----------------------
+
+

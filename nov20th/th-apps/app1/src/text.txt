@@ -1,0 +1,124 @@
+Threads
+...........
+-we can achieve multitasking in two differnt ways
+1--multi processing
+multiple processes executing simultiously to bring the simultanious output.
+e.g --OS,we can download any binary file,any audio system
+2--multithreading
+-----------------
+-To produce multiple outputs we will produce multiple threads.
+Thread
+......
+-same process one small portion we will treat as thread.
+another process of execution we treat as another thread.
+
+-Devided the block into 3 different blocks
+-processor will be switching over one thread with another.
+-each block is treated as thread.
+
+-multi threading is a light weight process.
+-Every programming language supporting multithreading.
+-most customer wants multiple output from different customer.
+
+*in any programming language threads are divided into two types.
+
+1--Daemon Thread
+it will depend on parent thread type.when ever parent is leaving daemon is leaving.
+if any thread is daemon,it will always look parent.
+2--User Thread
+-----
+even parent is leaving user thread keep on executing assigned task.
+-In any programming language these two threads are available.
+
+--In java there are two ways to create a thread
+
+multithreading achieved by
+
+1--Thread Schedular-----Daemon thread
+2--Garbage collector----Daemon thread
+3--main ------user thread
+
+Daemon threads are background thread.
+
+both are registering in Thread Schedular.
+
+Thread schedular
+-------------
+-takes care of scheduling approximate thread.
+
+*Garbage collector and main registering in Thread schedular.
+
+*What is the responsibility of garbage collector ?
+
+-removing garbage from memory.garbage is nothing but used object.
+
+main thread
+--------------
+-main thread is responsible for executing main()
+-main thread is foreground thread.single threaded java program---execution is from
+top to bottom.
+
+
+multithread java
+in java there are two ways for multitasking
+1--By using Thread class
+2--By using Runnable interface
+
+Thread is a concreate class of java.lang package
+
+several methods are there.very important method
+
+run()
+start()
+
+4-02-2018
+--------
+06-02-18<Inter Thread communication>
+____________________________________________
+
+-In order to achieve inter Thread communication  we have to use three methods 
+of Object class.
+
+1. wait()
+2. notify()
+3. notifyAll()
+
+-Object class is a super class to every class.
+-In every class these 3 methods available.
+
+-these methods are nonsynchronized and nonstatic.
+-To use this method two conditions to be followed.
+
+1--On whichever object thread is calling that objects Object-log shoulb be in the thread.
+2--if thread executed a1.wait()--it can be reused if somebody is calling a1.notify()
+or a1.notifyall()
+
+07-02-18
+----------
+
+-To avoid simultaneous execution by multiple threads we use synchronization.
+-threads relesing on waiting can not reenter
+
+
+09-02-11
+--------------
+Life Cycle of Thread
+
+----
+-There are several states are available in Thread Life cycle
+-in the interthread communication whenever thread is going to wailting state
+object log is released.
+
+
+c-10/4
+1204
+
+-There are two types of Threads available
+1-Daemon Thread
+------
+Which is depending upon its parent
+
+user Thread
+----------
+it is not depending upon its Thread life.
+

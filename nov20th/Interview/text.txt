@@ -1,0 +1,154 @@
+Multhithreading
+1. What is a thred and process ?
+-A process is a self contained execution envirionment
+-Threads are sometimes light weight process.
+
+2-What is mutithreding and multiprocessing ?
+
+-Threads are using shared memory localtion.
+
+3-How to create threads in java ?
+
+4-when to use Runnable and when to use Thread class,which is better ?
+
+Runnable is preferable
+- if u want to use only basic Thread functionality.
+-if your subclass is already extends some other classes.
+
+Thread class
+------------
+- if u want to use complete capabilities of Thread.
+
+5- what is thread life cycle ?
+
+new- Runnanbe---------------------runnning--treminated
+		waiting/block
+
+6- what is the use of sleep,join,yield, wait, notify,setPriority,setDaemon methods ?
+
+7-What is meant by Thread Shedular and what is its advantages.
+8- can we start the thread the thread alredy started?
+ThreadStateException
+
+9-What is a ThreadGroup and Thread Pool ?
+ThreadGroup
+-----------
+operate single command to operate the Thread.
+ThreadPool
+-----------
+How many threads Execute in a pool.
+better perforamn
+
+10> What is a daemon thread ?
+userdefined Thread
+Garbage collector
+depending upon parent having lower priority.
+
+11. Why wait(),notify(), notifyAll() methods are part of Object
+class not part of the Thread clss. ?
+-It is release the logs of Objectd not the Thread.
+
+
+12--Can we invoke invoke run method insted of start method ?
+if u call run() , it is considder as normal method
+not Thread.
+
+13-What is interrupted Exception, IllegalStateException ?
+
+interrupted Exceptio --Sleep() if other interrupted.
+IllegalStateException-Starting a Thread which is already executinhg.
+
+14-What is synchronization, and advantage of it ?
+allowing one thread @ at a time.
+
+15- When to use synchronize block, method and static synchronization ?
+
+
+16- What is dead lock ?
+
+17- What is the use of volitile keyword in java ?
+try to get latest value in the memory--in the multithered environment.
+
+18--What is Atomic classes and advantages ?
+
+-for the current value.
+
+19 - What is meant by lock ?
+
+20--What is different between Synchronization and lock ?
+
+
+Servlet
+----------
+What is ServletLoading, Servlet Instantiation and Sevlet Initialization ?
+Servlet Loading
+----------------
+Servelt Container loads our servlet comp class,
+So it is called Servlet Loading.
+
+ Class c = Class.forName("com.nt.servlet.FirstServlet");
+
+Servlet Instantiation
+----------------------
+ Here servlet container creates the object of Servlet comp class.
+
+c.newInstance();
+
+Servlet initialisation
+---------------------------
+here servletContainer assigns ServletConfig obj to our servlet class 
+object by callinf init(ServletConfig) method having ServletConfig as the argument.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

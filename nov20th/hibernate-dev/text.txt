@@ -1,0 +1,124 @@
+Hibernate Setup
+------------------
+-in place of jdbc we will using hibernate.
+Advantages
+------------
+concepts of hiberanate
+-----------------------
+-In case of jdbc ,it is a library is not a framework.
+-Hibernate is replacing jdbc.
+-to interact with database in place of jdbc we are using hibernate.
+
+-using
+
+https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.2.17.Final
+
+- it is always advisable to download hibernate distribution.
+
+https://sourceforge.net/projects/hibernate/
+https://sourceforge.net/projects/hibernate/files/hibernate4/4.2.21.Final/
+
+https://sourceforge.net/projects/hibernate/files/hibernate4/4.2.21.Final/hibernate-release-4.2.21.Final.zip/download
+
+
+
+G:\personal\softwares\hibernate-release-4.2.21.Final\project\hibernate-entitymanager\src\test\resources\org\hibernate\ejb\test
+
+
+19/05/18
+-------------
+-get() returns null if specified record is not available.
+-load() it returns objectNotavailbleException.
+
+-if sure plz call load() else get().
+
+lazy
+20/05/18
+-----------
+Query API
+----------------
+-to read specific type of queries.
+-Under query API two types of queries
+-It uses two type of queries.
+1--HQL -Hibernate Query Language
+2--SQL--Structured Query language
+
+-In the hibernate Query language u should use class name in place of table name.We have to use 
+attribute name of a class in place of column name of the table.
+
+
+26/05/2018
+----------------
+inside a pojo class we can do configuration that we do in hbm file that configuration
+is called Anotation configuration/programatic configuration.
+
+retention policy = runtime
+
+Any annotation having retention policy as runtime--whenever person is loading all
+annotation is loading.
+
+source
+class
+runtime
+
+component mapping
+-has-a- relationship
+
+-----------------
+composite primary key
+
+02/06/2018
+-----------
+is -a relation ship.
+
+-polymorphism------------------subclass object assigned to superclass.
+Pojo classes under one relation
+-whereever is- a- relation ship is there we can achieve polimorphism.
+
+Annotations mapping
+-----------------
+polimorphic mappings
+Association mapping
+
+10-06-2018
+---------------
+https://global.gotomeeting.com/join/545583653
+
+one-to- one bidirectional
+
+
+16-06-2018
+-----------
+index is only for Arrays and lists
+
+Collection Mapping
+one- to--many
+
+
+unidirectional/Bidirectional
+-------
+Through annotations
+
+unidirectional annotation mapping
+
+Many- to-one
+
+
+17-06-18
+------------
+pack17
+many - to - many
+bidirectional
+
+Assocication mappings
+-------------------
+uni/ni
+
+--only in case of many -to -many 
+bidirectional is avialable.
+
+Cache mechanism
+----------=----
+Hibernate supporting two lw
+
+C:\Users\SUCHITRA\Downloads\hibernate-release-4.2.21.Final\hibernate-release-4.2.21.Final\project\hibernate-ehcache\src\test\resources

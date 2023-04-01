@@ -1,0 +1,47 @@
+public interface Comparator < X >
+{
+	public int compare (X obj1, X obj2)
+}
+
+//before jdk1.5
+
+class HashMap <K, V>
+{
+	public V put(K key, K value)
+	{
+		//some statements
+	}
+	public V get(K key )
+	{
+		//some statements
+	}
+}
+
+
+
+-----------------------------------------
+
+public class ArrayList <E>
+
+{
+	public void add(E element)
+	{
+		//some thing
+	}
+	public E get(int index)
+	{
+		//some thing
+	}
+	--------------
+	--------------
+	--------------
+	--------------
+}
+
+=====================================
+
+public interface Compareable< T >
+{
+	public int compareTo(E element);
+}
+

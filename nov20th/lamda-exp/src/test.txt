@@ -1,0 +1,8 @@
+if any interface containing only one method-
+-single method inetrface like Runnable
+--then that interface is called functional interface.
+-We can use lambda interface for functional interfaces.
+-Lamda expressions are only introduced for functional interfaces.
+
+Requirement of Lamda Expressions
+--------------------------------

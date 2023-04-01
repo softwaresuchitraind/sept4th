@@ -1,0 +1,883 @@
+Hibernate Introductions
+-------------------------
+To develop persitance logic
+
+
+Persitance--The process of storing data for long time
+
+
+Hibernate(ORM tool)
+--------------------
+meaning ---sleep mode
+
+MVC
+---
+
+View-----controller ---Model
+
+---------------------------------
+Hibernate is at Model part
+
+-Hibernate designed for enterprise application.
+-Caches feature is not avilable in jbbc
+-Query language support also provided.
+
+-hibernates not having dependeny on server.
+-Hibernate is specially designed for DAO part.
+
+
+Hibernate Features
+------------------
+
+1--Auto DDL
+2--HQL--database indepent
+3--cache support
+4--PK generator supporter
+5--Validation support(Annotations)
+6--Exception free
+7--ORM support
+	is-A
+	has-A
+		rdbms
+8--OGM support
+	Object glad mapping
+	non-SQL support
+
+Object types
+------------
+
+-There are 3 types of object
+1--Transient--plain object
+2-persitant---Attached to Hibernate
+3-detached---Removed object
+
+Requirement
+--------
+1-pojo class
+2--mapping file
+3-configuaration file
+4-test class
+
+
+1--How to write POJO class
+-----------------------------
+
+1-Pojo class need to contain required number of properties
+  which are storing into table.
+
+2-POJO class default constructor is mandatory.
+
+3--for every property must setters and getters
+
+4-setters ans getters should be public.
+
+5- we can have extra variables and constructors.
+
+package beans;
+public class Student
+{
+	private int id;
+	private String name;
+	private String email;
+	private int marks;
+}
+
+Mapping file
+-------------------
+-Whenever u pass object to hibernate, hibernate will read
+student object data-- the data need to store.
+
+- to map bean class to table we require mapping file
+- to map object to Table--where it is stored.
+
+Student.hbm.xml
+----------------
+DTD
+<hibernate-mapping>
+	<class name="beans.Student" table="Student" 
+		Schema="Student">
+	 <id name="id" column="sid"/>
+	 <composite-id>
+		<key-property name="id" column="sid" />
+		<property name="names" column="sname" />
+		<property name="email" column="email" />
+	 </composite-id>
+
+
+<class>
+</hibernate-mapping>
+
+id or composite-id is mandatory.
+
+
+Configuration-file
+------------------
+
+hibernate.cfg.xml--Default recommmanded name
+-----------------
+<hibernate-configuration>
+
+	DB driver properties
+	DB Connection Pool properties
+	Hibernate Commands
+	Mapping files
+
+</hibernate-configuration>
+
+
+
+1--Create Object
+Student st = new Student();
+st.setId(111);
+st.setName('ABC');
+st.setEmail(abc@xyz.com);
+
+
+class Test
+----------
+
+Configuration cfg = new Configuration();
+cfg.configure();
+SessionFactory sf = cfg.buildSessionFactory();
+Session s = sf.opensession();
+s.Save(st);
+
+session.beginTransaction(commit);---Permanent state
+
+session.evict();-----remove from persistant and send it to garbage collector
+
+5/35
+----
+
+Hibernate.cfg.xml
+---------------------
+
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">Oracle.jdbc.OracleDriver
+	<property name="connection.url">jdbc:oracle:driver:@localhost:1521:XE</property>
+
+	<property name="connection.username">system</property>
+	<property name="connection.password">suchitra</property>
+	<property name="dialect">org.hibernate.dialect.oracledialect</property>
+
+	<mapping resource="Student.hbm.xml" />
+
+	
+</session-factory>
+</hibernate-configuration>
+
+
+open ecclips
+create java project
+------------------
+add hiberanate jars
+and test
+
+
+02/07/2018
+-----------
+style binding--
+style can be binding to a property of a class.
+
+property binding
+
+class binding---dynamically we can assign attribute to the class.
+
+
+Auto DDL operations
+-------------------
+
+-Autometically Hibernate can create tables in the database
+
+using a hibernate command
+
+hbm2ddl-auto ------create
+
+bean--Student
+
+Student
+{
+id;
+name;
+email;
+setter and getters
+}
+
+course
+{
+course id;
+cource name
+fee
+//setter and getters
+}
+
+
+Student.hbm.xml
+---------------
+
+<h-m>
+<class name>
+</h-m>
+
+
+Course.hbm.xml
+---------------
+<h-m>
+<class name="course" Table="Course" schema="System">
+
+</h-m>
+
+
+Hibernate.cfg.xml
+------------------
+
+<h-c>
+DB property
+<property name="dialect">org.dialect.OracleDialect</property>
+<property name="hbm2ddl">create</property>
+
+
+<Mapping resource="Student.hbm.xml">
+<Mapping resource="Course.hbm.xml">
+</h-c>
+
+
+configuration cfg= 
+
+session.buildFactory----------create a table
+
+
+hbm2ddl.auto--create -
+
+1. drop exising table
+2. create a freah table
+
+
+hbm2ddl.auto--update
+--------------------
+
+1. If any table required it creates a table
+2.If any table required, it will update existng table
+
+
+Auto-DDL
+--------
+create------drop and create
+update------alter and create
+validate----checking mapping file and schema
+create-drop--- drop - create - drop
+
+-------------
+
+hibernate.cfg.xml
+-----------------
+
+<property name="hbm2ddl.auto">create<property>
+
+
+cfg.buildSessionFactory();---drop exesting table and create an new table
+
+
+<property name="hbm2ddl.auto">update<property>
+
+Adding column should be not null/
+
+
+
+<property name="hbm2ddl.auto">validate<property>
+
+checking mapping file and schema.
+
+--Mapping columns must be table column
+--Mapping Column count <= tables column count
+
+Mapping Column count > tables column count  * Exception
+
+
+
+
+<property name="hbm2ddl.auto">create-drop<property>
+
+1.   drop table if exists
+2.  create new table
+3.   drop existing table
+
+SessionFactory sf = new SessionFactory();
+sf.close();
+
+
+-Not NUll columns are not updateable if the table contains data.
+
+
+How to connect with multiple databases ?
+---------------------------------
+
+Oracle.cfg.xml
+--------------
+<h-c>
+
+<session-factory>
+
+<property name="driver_class">oracle.jdbc.OracleDriver</property>
+
+		url
+		username
+		password
+
+
+<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+
+<mapping resources----------/>
+
+</session-factory>
+</h-c>
+
+configuration cfg = new Configuration();
+cfg.configure("Oracle.cfg.xml");
+cfg.addSessionFactory();
+
+
+
+
+Mysql.cfg.xml
+-----------------
+<h-c>
+
+<session-factory>
+
+<property name="driver_class">com.mysql.jdbc.driver</property>
+
+		url
+		username
+		password
+
+
+<property name="dialect">org.hibernate.dialect.MYsQL</property>
+
+<mapping resources----------/>
+
+</session-factory>
+</h-c>
+
+
+
+<property name="show_sql">true</false>
+<property name="format_sql">true</false>
+
+-if it is true internally executed quey is shown to us.
+
+
+
+<property name="format_sql">true</false>
+format displays
+
+
+10/35
+
+CRUD operations
+-----------------
+
+
+//transient state
+Student st = new Student();
+st.setId(111);
+st.setName("abc")
+st.setemail("abc@abc.com");
+
+//Persistant state
+----------------
+Configuration cfg = new Configuration();
+cfg.configure();
+
+SessionFactory sf = cfg.buildSessionFactory();
+
+Sesssion s = sf.opensession();
+
+Transaction t = s.beginTransaction();
+s.save();
+
+t.commit();
+
+
+
+1>insert data
+sava/persist/savaOrUpdate
+
+save()-----return type is primary key.
+persist()---void
+SaveOrUpdate()---Void---
+
+
+2>
+
+Update Data
+-------------
+
+update() /merge()
+
+-if u get any exception in update u can merge() method().
+
+3>
+Delete records
+----------------
+
+S.delete(st);
+
+CRUD
+---
+insert
+update
+delete
+select
+
+
+insert
+----------
+
+Configuration cfg = new Configuration();
+cfg.configure(Hibernate.cfg.xml);
+SessionFactory sf = buildSessionFactory();
+
+Session s = sf.opensession();
+
+Transaction t = s.beginTransaction();
+
+Student st = new Student();
+st.setId(111);
+st.setName("abc");
+st.setEmail("abc@gmail.com");
+s.save(st);
+t.commit();
+
+11/35
+
+saveOrUpdate()
+--------------
+first it select record using primary key.
+if record matching it will not do anything otherwise updates.
+
+
+if the no id record is available it will do save operations.
+
+save() can execute with out transaction boundaries.
+persist() can execute within transaction boundaries.
+
+
+12/35
+-----
+update method is available to upadate only non primary key column
+-complete record we need to update.
+-it is not possible to update one column.
+
+update(Entity) void
+merge(Entity) void
+
+
+
+Student st = S.get(Student.class,111);
+st.setId(111);
+st.setName("abc");
+st.setName("abc@gmail.com");
+
+If the session contains object update method can not
+update duplicate objects u get Exception.
+NonUniqueObjectExceptions
+
+
+If session contains duplicates pobject go for merge()
+
+
+delete
+-----------
+Student st = new Student();
+st.setId(111)
+Session.delete();
+tansaction.commit();
+session.close();
+sf.close();
+
+--------------
+
+there are method to select
+get(Entity.class,Serializable(pk))---Object
+load(Entity.class,Serializable(pk))---Object
+
+select
+----
+--------
+
+1 row
+
+Object o =S.get(Student.class,111); if 222--not there
+Student st = (Student)o; //NULLPONITER EXCEPTIUON
+Sop(st.getId());
+Sop(st.getName());
+
+
+
+Object o =S.load(Student.class,111); 
+Student st = (Student)o; 
+Sop(st.getId());   //NoObjectfoundException
+Sop(st.getName());
+
+
+load method ---when calling non primary query it will do select operation.
+
+
+get -- eager
+
+load --lazy
+
+
+
+Primary Key Auto Generators
+-------------------------------
+Autometically id is generated.
+
+1. assigned(default)---user
+2. increment--select max id and +1
+3. Sequence
+4. identity
+5. native
+6.hilo
+7.foreign
+8.custom
+
+
+class BookTicket
+{
+private int id;
+private String movieName;
+privaet String seatNo;
+Priave Sting show;
+
+setters and getters.
+
+}
+
+BookTicket.hbm.xml
+---------------------
+
+<h-m>
+<class name="bookTicket" table = "Tbook">
+
+<id name="id" column="id">
+	<generator class="assigned" />
+</id>
+
+<property name="movie" />
+<property name="show" />
+</h-m>
+
+-in case of assigned we need to pass id
+
+<generator class="increment">
+
+-In case of increment --it will get maxid
+from table and increment +1.
+
+-There is a chance to insert inconsisten data
+and there is a chance to loss data also
+
+15/35
+-------
+
+increment---user no need to pass id
+
+
+view--Application--DB
+-----------------------
+
+assigned----view (user)
+increment---Application
+identity---DB layer is responsible to increment.
+
+sequence---Database and Application both are responsible.
+
+--internally creates a sequence
+
+start with 1 and increment by one.
+
+v. hilo
+----------
+
+<generator class="hilo" />
+
+-every insert it will change
+it will create an Hibernate hilo table
+-in application layer
+
+-at the time of first deployemnt 0.
+-2nd deployment--insertion order is changed.
+
+Native
+----------
+
+
+
+
+internally it uses --
+<hilo,Identity,sequence>
+
+ --oracle support sequence not mysql
+
+
+18/35
+
+Primary key generations
+------------------------
+
+
+foreign(one-to -one)
+
+------------------
+
+
+Custom Generators
+-----------------
+
+
+Hibernate HQl
+-------------
+
+Hibernate Query language.
+------------------------
+
+CRUD
+------
+
+1--insert
+2--update
+3--delete
+4--select
+
+-one table data can be inserted to another
+-user data is not possible to insert.
+
+
+
+Differnce between HQL and Sql ?
+
+HQl
+----
+-it is related to hibernate
+-Hql queries are Object Queries
+
+e.g
+
+Select name from Student
+
+class Student
+{
+ 
+ name;
+}
+
+
+-HQl queries are database indepedent.
+
+Sql
+---
+-related to database
+-SQL quries are Table data.
+
+e.g 
+Select Sname from Student;
+
+-SQL queries are database dependent.
+
+21/35
+-----
+
+
+update
+-------
+
+String hql = Update Student set name= 'ABC', email='ABC@YMAIL.CO,' where id= 111;
+
+Query query = session.create.query(hql);
+
+int i = query.executeUpdate();
+t.commit();
+session.close();
+22/35
+----
+we can update primary key also.
+
+delete
+-------
+
+String hql ="delete Student where id=555";
+
+Query query = session.createQuery(hql);
+
+Select
+------
+
+1-- 1 Row
+----------
+
+String hql ="from Student"  ---all the data
+
+String hql = "Select name from Student";
+Query q = S.CreateQuery(hql);
+list<String> list = q.list();
+for(String name : list)
+{
+	SOP(name);
+}
+
+
+23/35
+-----
+
+Critria (Interfalce) ---------only select operation
+------
+ make select operations using conditions
+
+ 1>Select All  
+
+ Session S = SF.opensession();
+		
+ Criteria  C=  S.createCriteria(Employee.class);
+
+
+
+--list()---all records
+-uniqueObject()---sing results
+
+
+Restictions ---class
+------------
+
+Criterian ctr = Restictions.eq("id",1);
+C.add(ctr);
+Employee e = C.UniqueObject();
+
+
+
+where Salaray >8000
+-------------------
+
+
+Restictions.eq(=)
+Restictions.lt(<)
+Restictions.between(5000,1000)
+Restictions.distions()
+
+
+Criterian ctr =Restictions.gt("salary")
+C.add(ctr)
+
+List<Employee> =C.list();
+FOr(Employee e: list)
+{
+System.out.println(e);
+}
+
+
+Projections-API
+---------------------
+to apply agreegate function
+
+
+ Projection p =    Projections.property("name")
+
+C.setProjection(p); // select name from employee
+
+List<String> name = C.list();
+
+for(String name : names)
+{
+	SOP(name);
+}
+
+
+-We should not add multiple projections straightway
+
+
+
+ProjectionList p1 = Projectios.projectionList();
+
+p1.add(p)
+p1.add(p1)
+
+C.setProperty(P1);
+List<Object> list = C.list();
+
+
+--------------
+ 
+ Projections p = Projectios.avg("salary");
+ C.setProjections(p);
+
+ Projections p = projection.max(id);
+ C.setProjection(p)
+
+ int i = ()uniqueobject
+
+
+Restrictions-----for--condition  -like = ,>,<.like, between.
+Projections-----for---arrgate functions
+and particular column select operations
+
+25/35
+-------
+26/365
+------
+
+
+06/07/2018
+------------
+
+
+cache support
+----------
+Session lavel ---one user
+SessionFactory level---data is available in factory.
+		for all use
+
+Query cache.----same type of query we want to repeat
+		for all instance
+
+-reduce number of database calls
+-improve Application performance.
+
+-Session cache is used for one cache.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+we have seen html and servlets
+-In html we can present any UI related but jave code can not be incorporated in java code.
+-In case of Servlets we can incorporate java concepts.
+-presenting data in the servlet is not recommended.
+-in order to address the limitations of both html and servlet ,introduced jsp.
+-Every html file can be renamed as jsp.
+we can introdued java file in the jsp.
+-JSP---JAVA SERVER PAGES
+-------------------------------
+-Every HTML file can be renamed as JSP.
+-Presentation is vey easy in jsp
+-Inside a jsp there are multiple ways to incorporate java file.
+-There are multiple ways to incorporate java code inside jsp.
+
+There are 4 different ways to incorporate java code inside jsp
+
+1--expressions ------printing
+2--Scriplet---------part of the method-executeable content
+3-Delarations
+4-Directives
+--------------
+there are 3 types of directives available
+
+1-page
+2-include
+3-taglib
+
+
+-in order to import we use page directive.
+
+F:\Tomcat8.0\work\Catalina\localhost\app4\org\apache\jsp
+
+implicit objects		datatypes
+--------------                  ----------
+pageContext			pageContext
+session				HttpSession
+application			ServletContext
+config				ServletConfig
+out				JspWriter
+page				Object(this)
+request				HttpServletRequest
+response			HttpServletResponse
+exception			Throwable
+
+
+-All the implicit objects can be used in the straightway.
+-exception implicit objects available only in the error pages.
+
+-Inside HttpJspBase 3 methods are final
+1-init()
+2-service()
+3-destroy()
+-
+
+-we can not develop those three methods in our jsp.The reason is those 3 methods
+are final in HttpJspBase.
+
+- _jspinit(), _jspService, _jspdestroy() is autometically developed by server.
+we can not develop in our jsp.
+
+_ methods exclusively for server. These methods autometically implemented by server.
+
+-in our jsp we can not develop 6 methods, those methods
+are above.
+
+How to achieve initialisation and house keeping activity inside jsp ?
+
+-In order to achive any initialisation try to overide jspinit() methood
+-in order to use any house keeping activities use jspdestroy() method.
+-
+
+Life_Cycle of JSP
+--------------------
+
+-jsp life cycle is nothing but Servlet life cycle.
+-While making a call to jsp 1st time
+
+
+-Directives and declarations are not in the _jspService
+-Apart from directives and declarations remaining complete content of jsp incorporating in _jspService
+
+
+-Servlets are for bussiness logic and jsp is for presentation.
+
+
+11-06-2018
+----------------
+
+Maven based development
+
+
+file-new -project-maven-maven project
+
+new Maven project
+
+group id--com.lara
+Artifatid-app8
+
+Right click on project--properties -target runtime
+
+
+Right clik project- properties- java build path--source
+
+
+
+Expression languange
+-------------------
+it is used for hiding java code.
+
+
+12/06/18
+---------
+
+JSTl
+----------
+-JSTL stands for
+Jsp standard tag library
+
+-like Html tags there are several JSp tags available we should no the 
+process of using
+
+
+13-06-18
+-------------.
+
+F:\servlets-dev1\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost\app12\org\apache\jsp
+localtion of java file
+
+
+
+

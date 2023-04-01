@@ -1,0 +1,30 @@
+webservices--Rest based
+..........................
+https://jersey.github.io/download.html
+
+click on---jersey JAX-RS 2.1 RI bundle
+
+-copying lib folder
+- registering in web.xml
+
+
+6/01/2017---wevservices
+..................
+http://localhost:7070/app1/rest/hello
+core java based development
+
+-Webservices is mainly for developing any type of clients.
+
+07/01/2018--wevservices
+----------------------
+APPLICATION_JSON
+
+java script object notation
+
+How to send input to webservice
+
+..................................
+
+13/01/2018
+-------------
+14012018

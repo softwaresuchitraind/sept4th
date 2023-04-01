@@ -1,0 +1,46 @@
+Assertions
+----------
+-Assertions introduced in jdk 1.4
+-Assert is a keyword from jdk 1.4
+-Assertions are used for validating business rule like a throw keyword.
+-By default assert statements are not executing.
+-In order to execute assert statement we have to enable the assert statement.
+-enabling of the assert statement can be done through one of the VM(Virtual machine) argument.
+that VM argument is
+
+-ea   (or)	-enableassertitions
+
+we can disable assert statement explicitely
+
+-da	(or)	-disableassertions
+
+There are two types of assert statements available.
+1-
+
+Very Simple AssertStatements (VSA)
+----------------------------------
+
+assert  boolean;
+
+Simple AssertStatement (SA)
+----------------------------------
+
+assert  boolean : some_message;
+
+
+enabling/disabling
+1-execution wise
+2-package wise 
+3-in a paricular class
+
+
+enabling in all the classes
+G:\nov20th\assert-dev\src>java -cp ../classes -ea pack1.L
+
+
+disabling in all the classes
+G:\nov20th\assert-dev\src>java -cp ../classes -da pack1.L
+
+
+only from pack2 members
+G:\nov20th\assert-dev\src>java -cp ../classes -ea:pack2... pack1.L

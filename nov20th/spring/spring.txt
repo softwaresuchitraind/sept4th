@@ -1,0 +1,59 @@
+Spring inheristance
+______________________
+-inheriting one bean defination to another.
+
+5/5/2018
+--------
+client-service--dao service---database
+6/05/18
+--------
+spring jdbc with web app
+jstl usage
+
+24/06/18
+-----------------
+
+-spring developer develop one module to interact with Hibernate that module is Spring ORM.
+-By using spring ORM --not only Hibernate any ORM basic frameworks can be interacted to the spring
+
+download spring ORM maven dependancy
+
+
+30/06/2018
+----------
+
+07/07/2018
+----------
+Spring MVC
+--------------
+
+14/07/18
+///////////////
+
+create table gender(id int primary key, name varchar(90));
+insert into gender values(1, 'male');
+insert into gender values(2, 'female');
+create table education(id int primary key, name varchar(90));
+insert into education values(1, 'MCA');
+insert into education values(2, 'B.Tech');
+drop table skill cascade constraints;
+create table skill(id int primary key, name varchar(90));
+insert into skill values(1, 'c');
+insert into skill values(2, 'c++');
+create table project(id int primary key, name varchar(90));
+insert into project values(1, 'citi');
+insert into project values(2, 'axis');
+
+
+180918
+-------
+bean life cycle
+
+Student1 implements DisposableBean,BeanpostProcessor
+{
+
+}
+
+-Setter injection requires no-arg constructor.
+
+-afterProperties() method is called.

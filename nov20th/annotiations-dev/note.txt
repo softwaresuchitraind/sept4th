@@ -1,0 +1,20 @@
+-in 1.5 introduced Enums,static imports and annotations
+-Annotation can become a member of a java file like a class,interface and enum
+-While compiling class file generating to the Annotation also.
+-Annotations can be developed and used with @
+-Annotations are used for providing some description to package or to a class or 
+an interface or enum or another annotation or to the field ,constructor,
+method or agrument, local variable.
+- Annotations are only for providing description.
+-it is not for executing any logic or task.
+- javac command  ignores under commet what we write.
+-comments content not generating biary code in the class file.
+-that information is not available in the memeory.
+-comments are retaining only in the java file -- it is not moving into the class file.
+-Where as annotations not only in the java file --it is in the binary file and also
+in the memory.
+-Annotation description also in the memory also.
+-do not compare annotation description with comments description.
+-it is developed with @ symbol
+
+
